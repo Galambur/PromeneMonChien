@@ -209,10 +209,11 @@
             this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.bindingSourceUser, "idVille", true));
             this.comboBox1.DataSource = this.villeBindingSource;
             this.comboBox1.DisplayMember = "nomVille";
+            this.comboBox1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(389, 243);
+            this.comboBox1.Location = new System.Drawing.Point(389, 236);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(146, 21);
+            this.comboBox1.Size = new System.Drawing.Size(146, 31);
             this.comboBox1.TabIndex = 4;
             this.comboBox1.ValueMember = "idVille";
             // 

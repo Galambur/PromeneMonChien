@@ -38,19 +38,24 @@ namespace PromeneMonChien
         {
             using (MySqlConnection con = new MySqlConnection(myConn))
             {
+                // ouverture de la connexion à notre base de données
                 con.Open();
                 using (MySqlCommand com = new MySqlCommand(InsertQuery, con))
                 {
+                    // on récupère les données du formulaire en les liant aux paramètre de notre 
+                    // requête
                     com.Parameters.AddWithValue("@nomUtilisateur", nameBox.Text);
                     com.Parameters.AddWithValue("@prenomUtilisateur", firstNameBox.Text);
                     com.Parameters.AddWithValue("@proprietaire", checkBoxProprietaire.Checked);
-                    com.Parameters.AddWithValue("@idVille", comboBox1.SelectedIndex);
+                    com.Parameters.AddWithValue("@idVille", comboBox1.SelectedValue);
                     com.Parameters.AddWithValue("@telephone", phoneBox.Text);
                     com.Parameters.AddWithValue("@email", emailBox.Text);
                     com.Parameters.AddWithValue("@mdp", passwordBox.Text);
+                    // on exécute la requête
                     com.ExecuteNonQuery();
                 }
             }
+            // fermeture de la fenêtre
             this.Close();
         }
 

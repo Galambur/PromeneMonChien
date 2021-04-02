@@ -32,6 +32,7 @@
             this.CreateUserLabel = new System.Windows.Forms.LinkLabel();
             this.addDogs = new System.Windows.Forms.LinkLabel();
             this.showUsersLabel = new System.Windows.Forms.LinkLabel();
+            this.linkLabelModify = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // mainTitle
@@ -90,12 +91,28 @@
             this.showUsersLabel.VisitedLinkColor = System.Drawing.Color.Green;
             this.showUsersLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.showUsers_clicked);
             // 
+            // linkLabelModify
+            // 
+            this.linkLabelModify.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.linkLabelModify.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabelModify.LinkColor = System.Drawing.Color.DarkGreen;
+            this.linkLabelModify.Location = new System.Drawing.Point(0, 358);
+            this.linkLabelModify.Name = "linkLabelModify";
+            this.linkLabelModify.Size = new System.Drawing.Size(800, 75);
+            this.linkLabelModify.TabIndex = 6;
+            this.linkLabelModify.TabStop = true;
+            this.linkLabelModify.Text = "Modify user";
+            this.linkLabelModify.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.linkLabelModify.VisitedLinkColor = System.Drawing.Color.Green;
+            this.linkLabelModify.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.modifyLink_clicked);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MintCream;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.linkLabelModify);
             this.Controls.Add(this.showUsersLabel);
             this.Controls.Add(this.addDogs);
             this.Controls.Add(this.CreateUserLabel);
@@ -112,5 +129,6 @@
         private System.Windows.Forms.LinkLabel CreateUserLabel;
         private System.Windows.Forms.LinkLabel addDogs;
         private System.Windows.Forms.LinkLabel showUsersLabel;
+        private System.Windows.Forms.LinkLabel linkLabelModify;
     }
 }

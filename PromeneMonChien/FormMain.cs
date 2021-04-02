@@ -34,5 +34,11 @@ namespace PromeneMonChien
             ShowUsers f = new ShowUsers();
             f.ShowDialog();
         }
+
+        private void modifyLink_clicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ModifyUser f = new ModifyUser();
+            f.ShowDialog();
+        }
     }
 }
