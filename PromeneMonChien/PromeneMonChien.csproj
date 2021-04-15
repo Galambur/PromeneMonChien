@@ -76,35 +76,59 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="chien.cs" />
-    <Compile Include="CreateUser.cs">
+    <Compile Include="FormMainAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CreateUser.Designer.cs">
-      <DependentUpon>CreateUser.cs</DependentUpon>
+    <Compile Include="FormMainAdmin.Designer.cs">
+      <DependentUpon>FormMainAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddDog.cs">
+    <Compile Include="PromenadeCreate.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddDog.Designer.cs">
-      <DependentUpon>AddDog.cs</DependentUpon>
+    <Compile Include="PromenadeCreate.Designer.cs">
+      <DependentUpon>PromenadeCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="ModifyUser.cs">
+    <Compile Include="UserCreate.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ModifyUser.Designer.cs">
-      <DependentUpon>ModifyUser.cs</DependentUpon>
+    <Compile Include="UserCreate.Designer.cs">
+      <DependentUpon>UserCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="ShowUsers.cs">
+    <Compile Include="DogAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ShowUsers.Designer.cs">
-      <DependentUpon>ShowUsers.cs</DependentUpon>
+    <Compile Include="DogAdd.Designer.cs">
+      <DependentUpon>DogAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormMain.cs">
+    <Compile Include="Connexion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormMain.Designer.cs">
-      <DependentUpon>FormMain.cs</DependentUpon>
+    <Compile Include="Connexion.Designer.cs">
+      <DependentUpon>Connexion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserDelete.Designer.cs">
+      <DependentUpon>UserDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserModify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserModify.Designer.cs">
+      <DependentUpon>UserModify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UsersShow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsersShow.Designer.cs">
+      <DependentUpon>UsersShow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMainUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMainUser.Designer.cs">
+      <DependentUpon>FormMainUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="promenade.cs" />
@@ -118,17 +142,29 @@
     <Compile Include="type.cs" />
     <Compile Include="utilisateur.cs" />
     <Compile Include="ville.cs" />
-    <EmbeddedResource Include="AddDog.resx">
-      <DependentUpon>AddDog.cs</DependentUpon>
+    <EmbeddedResource Include="DogAdd.resx">
+      <DependentUpon>DogAdd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CreateUser.resx">
-      <DependentUpon>CreateUser.cs</DependentUpon>
+    <EmbeddedResource Include="Connexion.resx">
+      <DependentUpon>Connexion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormMain.resx">
-      <DependentUpon>FormMain.cs</DependentUpon>
+    <EmbeddedResource Include="FormMainAdmin.resx">
+      <DependentUpon>FormMainAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ModifyUser.resx">
-      <DependentUpon>ModifyUser.cs</DependentUpon>
+    <EmbeddedResource Include="PromenadeCreate.resx">
+      <DependentUpon>PromenadeCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserCreate.resx">
+      <DependentUpon>UserCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserDelete.resx">
+      <DependentUpon>UserDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMainUser.resx">
+      <DependentUpon>FormMainUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserModify.resx">
+      <DependentUpon>UserModify.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -139,8 +175,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ShowUsers.resx">
-      <DependentUpon>ShowUsers.cs</DependentUpon>
+    <EmbeddedResource Include="UsersShow.resx">
+      <DependentUpon>UsersShow.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="promenemonchienDataSet.xsc">

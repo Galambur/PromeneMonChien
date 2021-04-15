@@ -1,6 +1,6 @@
 ﻿namespace PromeneMonChien
 {
-    partial class AddDog
+    partial class DogAdd
     {
         /// <summary>
         /// Required designer variable.

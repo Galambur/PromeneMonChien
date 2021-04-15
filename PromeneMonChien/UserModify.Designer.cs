@@ -1,6 +1,6 @@
 ﻿namespace PromeneMonChien
 {
-    partial class ModifyUser
+    partial class UserModify
     {
         /// <summary>
         /// Required designer variable.

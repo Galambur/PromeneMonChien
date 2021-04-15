@@ -14,13 +14,13 @@ using System.Windows.Forms;
 
 namespace PromeneMonChien
 {
-    public partial class CreateUser : Form
+    public partial class UserCreate : Form
     {
         private static string myConn = ConfigurationManager.ConnectionStrings["PromeneMonChien.Properties.Settings.promenemonchienConnectionString"].ConnectionString;
         // on ne spécifie pas l'id car il s'auto incrémentera tout seul à partir du dernier id de la bdd
         private const string InsertQuery = "INSERT INTO utilisateur(nomUtilisateur, prenomUtilisateur, proprietaire, idVille, telephone, email, mdp) Values (@nomUtilisateur, @prenomUtilisateur, @proprietaire, @idVille, @telephone, @email, @mdp)";
 
-        public CreateUser()
+        public UserCreate()
         {
             InitializeComponent();
         }

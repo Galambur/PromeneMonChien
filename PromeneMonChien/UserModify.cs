@@ -1,24 +1,20 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Configuration;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PromeneMonChien
 {
-    public partial class ModifyUser : Form
+    public partial class UserModify : Form
     {
-        private static string myConn = ConfigurationManager.ConnectionStrings["PromeneMonChien.Properties.Settings.promenemonchienConnectionString"].ConnectionString;
+        // chaine de connexion
+        private static string myConn = ConfigurationManager.ConnectionStrings["PromeneMonChien.Properties." +
+            "Settings.promenemonchienConnectionString"].ConnectionString;
+        // requête SQL pour modifier la ligne désirée
         private const string UpdateQuery = "Update utilisateur set nomUtilisateur=@nomUtilisateur, " +
             "prenomUtilisateur=@prenomUtilisateur, proprietaire=@proprietaire, idVille=@idVille, " +
             "telephone=@telephone, email=@email, mdp=@mdp where idUtilisateur=@idUtilisateur";
-        public ModifyUser()
+        public UserModify()
         {
             InitializeComponent();
         }
@@ -34,9 +30,12 @@ namespace PromeneMonChien
         {
             using (MySqlConnection con = new MySqlConnection(myConn))
             {
+                // ouverture de la connexion à notre base de données
                 con.Open();
                 using (MySqlCommand com = new MySqlCommand(UpdateQuery, con))
                 {
+                    // récupération des données du formulaire, on les relie aux paramètre de
+                    // notre requête SQL
                     com.Parameters.AddWithValue("@idUtilisateur", comboBoxUserName.SelectedValue);
                     com.Parameters.AddWithValue("@nomUtilisateur", comboBoxUserName.Text);
                     com.Parameters.AddWithValue("@prenomUtilisateur", firstNameBox.Text);
@@ -45,9 +44,11 @@ namespace PromeneMonChien
                     com.Parameters.AddWithValue("@telephone", phoneBox.Text);
                     com.Parameters.AddWithValue("@email", emailBox.Text);
                     com.Parameters.AddWithValue("@mdp", passwordBox.Text);
+                    // execution de la requête
                     com.ExecuteNonQuery();
                 }
             }
+            //fermeture de la fenêtre de modification
             this.Close();
         }
     }

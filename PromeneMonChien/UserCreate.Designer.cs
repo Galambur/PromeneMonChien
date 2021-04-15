@@ -1,6 +1,6 @@
 ﻿namespace PromeneMonChien
 {
-    partial class CreateUser
+    partial class UserCreate
     {
         /// <summary>
         /// Required designer variable.

@@ -10,34 +10,45 @@ using System.Windows.Forms;
 
 namespace PromeneMonChien
 {
-    public partial class FormMain : Form
+    public partial class FormMainUser : Form
     {
-        public FormMain()
+        public FormMainUser()
         {
             InitializeComponent();
         }
 
         private void createUser_clicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            CreateUser f = new CreateUser();
+            UserCreate f = new UserCreate();
             f.ShowDialog();
         }
 
         private void addDogs_clicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            AddDog f = new AddDog();
+            DogAdd f = new DogAdd();
             f.ShowDialog();
         }
 
         private void showUsers_clicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            ShowUsers f = new ShowUsers();
+            UsersShow f = new UsersShow();
             f.ShowDialog();
         }
 
         private void modifyLink_clicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            ModifyUser f = new ModifyUser();
+            UserModify f = new UserModify();
+            f.ShowDialog();
+        }
+
+        private void connexion_clicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            UserDelete f = new UserDelete();
             f.ShowDialog();
         }
     }

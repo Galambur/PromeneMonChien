@@ -1,6 +1,6 @@
 ﻿namespace PromeneMonChien
 {
-    partial class ShowUsers
+    partial class UsersShow
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ShowUsers));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UsersShow));
             this.showUsersTitle = new System.Windows.Forms.Label();
             this.dataGridViewUsers = new System.Windows.Forms.DataGridView();
             this.idUtilisateurDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,7 +47,6 @@
             this.bindingNavigatorShowUsers = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
@@ -56,7 +55,7 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.saveChangesButton = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.utilisateurBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceUsers)).BeginInit();
@@ -91,6 +90,7 @@
             this.dataGridViewUsers.DataSource = this.utilisateurBindingSource;
             this.dataGridViewUsers.Location = new System.Drawing.Point(25, 103);
             this.dataGridViewUsers.Name = "dataGridViewUsers";
+            this.dataGridViewUsers.ReadOnly = true;
             this.dataGridViewUsers.Size = new System.Drawing.Size(739, 283);
             this.dataGridViewUsers.TabIndex = 3;
             // 
@@ -99,48 +99,56 @@
             this.idUtilisateurDataGridViewTextBoxColumn.DataPropertyName = "idUtilisateur";
             this.idUtilisateurDataGridViewTextBoxColumn.HeaderText = "idUtilisateur";
             this.idUtilisateurDataGridViewTextBoxColumn.Name = "idUtilisateurDataGridViewTextBoxColumn";
+            this.idUtilisateurDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // nomUtilisateurDataGridViewTextBoxColumn
             // 
             this.nomUtilisateurDataGridViewTextBoxColumn.DataPropertyName = "nomUtilisateur";
             this.nomUtilisateurDataGridViewTextBoxColumn.HeaderText = "nomUtilisateur";
             this.nomUtilisateurDataGridViewTextBoxColumn.Name = "nomUtilisateurDataGridViewTextBoxColumn";
+            this.nomUtilisateurDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // prenomUtilisateurDataGridViewTextBoxColumn
             // 
             this.prenomUtilisateurDataGridViewTextBoxColumn.DataPropertyName = "prenomUtilisateur";
             this.prenomUtilisateurDataGridViewTextBoxColumn.HeaderText = "prenomUtilisateur";
             this.prenomUtilisateurDataGridViewTextBoxColumn.Name = "prenomUtilisateurDataGridViewTextBoxColumn";
+            this.prenomUtilisateurDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // proprietaireDataGridViewCheckBoxColumn
             // 
             this.proprietaireDataGridViewCheckBoxColumn.DataPropertyName = "proprietaire";
             this.proprietaireDataGridViewCheckBoxColumn.HeaderText = "proprietaire";
             this.proprietaireDataGridViewCheckBoxColumn.Name = "proprietaireDataGridViewCheckBoxColumn";
+            this.proprietaireDataGridViewCheckBoxColumn.ReadOnly = true;
             // 
             // idVilleDataGridViewTextBoxColumn
             // 
             this.idVilleDataGridViewTextBoxColumn.DataPropertyName = "idVille";
             this.idVilleDataGridViewTextBoxColumn.HeaderText = "idVille";
             this.idVilleDataGridViewTextBoxColumn.Name = "idVilleDataGridViewTextBoxColumn";
+            this.idVilleDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // telephoneDataGridViewTextBoxColumn
             // 
             this.telephoneDataGridViewTextBoxColumn.DataPropertyName = "telephone";
             this.telephoneDataGridViewTextBoxColumn.HeaderText = "telephone";
             this.telephoneDataGridViewTextBoxColumn.Name = "telephoneDataGridViewTextBoxColumn";
+            this.telephoneDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // emailDataGridViewTextBoxColumn
             // 
             this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
             this.emailDataGridViewTextBoxColumn.HeaderText = "email";
             this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // mdpDataGridViewTextBoxColumn
             // 
             this.mdpDataGridViewTextBoxColumn.DataPropertyName = "mdp";
             this.mdpDataGridViewTextBoxColumn.HeaderText = "mdp";
             this.mdpDataGridViewTextBoxColumn.Name = "mdpDataGridViewTextBoxColumn";
+            this.mdpDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // utilisateurBindingSource
             // 
@@ -164,7 +172,7 @@
             // bindingNavigatorShowUsers
             // 
             this.bindingNavigatorShowUsers.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.bindingNavigatorShowUsers.BindingSource = this.bindingSourceUsers;
+            this.bindingNavigatorShowUsers.BindingSource = this.utilisateurBindingSource;
             this.bindingNavigatorShowUsers.CountItem = this.bindingNavigatorCountItem;
             this.bindingNavigatorShowUsers.DeleteItem = this.bindingNavigatorDeleteItem;
             this.bindingNavigatorShowUsers.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -178,8 +186,7 @@
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem,
-            this.saveChangesButton});
+            this.bindingNavigatorDeleteItem});
             this.bindingNavigatorShowUsers.Location = new System.Drawing.Point(0, 0);
             this.bindingNavigatorShowUsers.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bindingNavigatorShowUsers.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -208,15 +215,6 @@
             this.bindingNavigatorCountItem.Text = "de {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Nombre total d\'éléments";
             // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Supprimer";
-            // 
             // bindingNavigatorMoveFirstItem
             // 
             this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -244,9 +242,10 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
-            this.bindingNavigatorPositionItem.Text = "1";
+            this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Position actuelle";
             // 
             // bindingNavigatorSeparator1
@@ -277,15 +276,14 @@
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
-            // saveChangesButton
+            // bindingNavigatorDeleteItem
             // 
-            this.saveChangesButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.saveChangesButton.Image = ((System.Drawing.Image)(resources.GetObject("saveChangesButton.Image")));
-            this.saveChangesButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.saveChangesButton.Name = "saveChangesButton";
-            this.saveChangesButton.Size = new System.Drawing.Size(23, 22);
-            this.saveChangesButton.Text = "Valider";
-            this.saveChangesButton.Click += new System.EventHandler(this.saveChangesButton_Click);
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Supprimer";
             // 
             // ShowUsers
             // 
@@ -330,7 +328,6 @@
         private System.Windows.Forms.BindingNavigator bindingNavigatorShowUsers;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
@@ -339,6 +336,6 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton saveChangesButton;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
     }
 }
