@@ -1,13 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Configuration;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PromeneMonChien
@@ -23,36 +16,10 @@ namespace PromeneMonChien
             InitializeComponent();
         }
 
-        private void nameLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBoxUserName_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void firstNameBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void firstNameLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void deleteUserTitle_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void validateButton_Click(object sender, EventArgs e)
         {
-            string emailTyped = emailBox.Text;
-            string passwordTyped = passwordBox.Text;
             int attempt = 0;
+            bool result;
 
             using (MySqlConnection con = new MySqlConnection(myConn))
             {
@@ -65,24 +32,36 @@ namespace PromeneMonChien
                     com.Parameters.AddWithValue("@email", emailBox.Text);
                     com.Parameters.AddWithValue("@mdp", passwordBox.Text);
                     // on exécute la requête
-                    com.ExecuteNonQuery();
+                    result = com.ExecuteReader().HasRows;
                 }
             }
 
-            if ((email == "g@d") && (password == "123"))
+            if ((emailBox.Text == "g@d") && (passwordBox.Text == "123") && (result == true))
             {
                 attempt = 0;
-                MessageBox.Show("you are granted with access");
+                FormMainAdmin f = new FormMainAdmin();
+                this.Hide();
+                f.ShowDialog();
+                this.Close();
             }
-            else if ((attempt == 3) && (attempt > 0))
+            else if (result == true && attempt < 3)
             {
-                MessageBox.Show("You Have Only " + Convert.ToString(attempt) + " Attempt Left To Try");
-                --attempt;
+                FormMainUser f = new FormMainUser();
+                this.Hide();
+                f.ShowDialog();
+                this.Close();
+                ++attempt;
+            }
+            else if (result == false && attempt < 3)
+            {
+                MessageBox.Show("Email ou mot de passe incorrect");
+                emailBox.Text = String.Empty;
+                passwordBox.Text = String.Empty;
             }
             else
             {
-                attempt = 0;
-                MessageBox.Show("you are not granted with access");
+                MessageBox.Show("Trop d'essais");
+                this.Close();
             }
         }
     }

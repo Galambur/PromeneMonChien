@@ -28,7 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.mainTitle = new System.Windows.Forms.Label();
             this.SuspendLayout();
+            // 
+            // mainTitle
+            // 
+            this.mainTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.mainTitle.Font = new System.Drawing.Font("Calibri", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mainTitle.Location = new System.Drawing.Point(0, 0);
+            this.mainTitle.Name = "mainTitle";
+            this.mainTitle.Size = new System.Drawing.Size(800, 100);
+            this.mainTitle.TabIndex = 1;
+            this.mainTitle.Text = "Bienvenue sur Promène mon chien ! admin";
+            this.mainTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormMainAdmin
             // 
@@ -36,6 +48,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MintCream;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.mainTitle);
             this.Name = "FormMainAdmin";
             this.Text = "Promène mon chien";
             this.ResumeLayout(false);
@@ -43,5 +56,7 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.Label mainTitle;
     }
 }

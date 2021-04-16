@@ -78,7 +78,6 @@
             this.nameLabel.Size = new System.Drawing.Size(47, 23);
             this.nameLabel.TabIndex = 2;
             this.nameLabel.Text = "Nom";
-            this.nameLabel.Click += new System.EventHandler(this.nameLabel_Click);
             // 
             // nameBox
             // 
@@ -87,12 +86,10 @@
             this.nameBox.Name = "nameBox";
             this.nameBox.Size = new System.Drawing.Size(146, 31);
             this.nameBox.TabIndex = 1;
-            this.nameBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // bindingSourceUser
             // 
             this.bindingSourceUser.DataSource = this.utilisateurBindingSource;
-            this.bindingSourceUser.CurrentChanged += new System.EventHandler(this.bindingSource1_CurrentChanged_1);
             // 
             // utilisateurBindingSource
             // 
@@ -103,7 +100,6 @@
             // 
             this.bindingSourceVille.DataSource = this.promenemonchienDataSet;
             this.bindingSourceVille.Position = 0;
-            this.bindingSourceVille.CurrentChanged += new System.EventHandler(this.bindingSource1_CurrentChanged);
             // 
             // promenemonchienDataSet
             // 
@@ -241,7 +237,7 @@
             this.validateButton.UseVisualStyleBackColor = true;
             this.validateButton.Click += new System.EventHandler(this.validateButton_clicked);
             // 
-            // CreateUser
+            // UserCreate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -262,7 +258,7 @@
             this.Controls.Add(this.nameBox);
             this.Controls.Add(this.nameLabel);
             this.Controls.Add(this.createUserTitle);
-            this.Name = "CreateUser";
+            this.Name = "UserCreate";
             this.Text = "Promène mon chien";
             this.Load += new System.EventHandler(this.CreateUser_Load);
             this.Click += new System.EventHandler(this.validateButton_clicked);

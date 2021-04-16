@@ -46,7 +46,6 @@
             this.connectionTitle.TabIndex = 47;
             this.connectionTitle.Text = "Se connecter";
             this.connectionTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.connectionTitle.Click += new System.EventHandler(this.deleteUserTitle_Click);
             // 
             // passwordBox
             // 
@@ -56,7 +55,6 @@
             this.passwordBox.PasswordChar = '*';
             this.passwordBox.Size = new System.Drawing.Size(146, 31);
             this.passwordBox.TabIndex = 2;
-            this.passwordBox.TextChanged += new System.EventHandler(this.firstNameBox_TextChanged);
             // 
             // passwordLabel
             // 
@@ -67,7 +65,6 @@
             this.passwordLabel.Size = new System.Drawing.Size(113, 23);
             this.passwordLabel.TabIndex = 46;
             this.passwordLabel.Text = "Mot de passe";
-            this.passwordLabel.Click += new System.EventHandler(this.firstNameLabel_Click);
             // 
             // emailLabel
             // 
@@ -78,7 +75,6 @@
             this.emailLabel.Size = new System.Drawing.Size(51, 23);
             this.emailLabel.TabIndex = 45;
             this.emailLabel.Text = "Email";
-            this.emailLabel.Click += new System.EventHandler(this.nameLabel_Click);
             // 
             // emailBox
             // 

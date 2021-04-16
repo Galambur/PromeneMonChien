@@ -1,14 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Configuration;
-using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MySql.Data;
 using MySql.Data.MySqlClient;
 using System.Windows.Forms;
 
@@ -23,15 +14,6 @@ namespace PromeneMonChien
         public UserCreate()
         {
             InitializeComponent();
-        }
-
-        private void nameLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
         }
 
         private void validateButton_clicked(object sender, EventArgs e)
@@ -59,33 +41,10 @@ namespace PromeneMonChien
             this.Close();
         }
 
-        private bool SaveUserDetails(utilisateur uti) 
-        {
-            bool result = false;
-            using (PromeneMonChienContext _entity = new PromeneMonChienContext())
-            {
-                _entity.utilisateurs.Add(uti);
-                _entity.SaveChanges();
-                result = true;
-            }
-            return result;
-        }
-
-        private void bindingSource1_CurrentChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void CreateUser_Load(object sender, EventArgs e)
         {
             this.utilisateurTableAdapter.Fill(this.promenemonchienDataSet.utilisateur);
             this.villeTableAdapter.Fill(this.promenemonchienDataSet.ville);
-
-        }
-
-        private void bindingSource1_CurrentChanged_1(object sender, EventArgs e)
-        {
-
         }
     }
 }

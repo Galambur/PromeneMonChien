@@ -41,9 +41,7 @@ namespace PromeneMonChien
 
         private void UserDelete_Load(object sender, EventArgs e)
         {
-            // TODO: cette ligne de code charge les données dans la table 'promenemonchienDataSet.ville'. Vous pouvez la déplacer ou la supprimer selon les besoins.
             this.villeTableAdapter.Fill(this.promenemonchienDataSet.ville);
-            // TODO: cette ligne de code charge les données dans la table 'promenemonchienDataSet.utilisateur'. Vous pouvez la déplacer ou la supprimer selon les besoins.
             this.utilisateurTableAdapter.Fill(this.promenemonchienDataSet.utilisateur);
 
         }
