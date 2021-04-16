@@ -86,9 +86,10 @@
             // 
             // validateButton
             // 
-            this.validateButton.Location = new System.Drawing.Point(668, 415);
+            this.validateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.validateButton.Location = new System.Drawing.Point(662, 403);
             this.validateButton.Name = "validateButton";
-            this.validateButton.Size = new System.Drawing.Size(120, 23);
+            this.validateButton.Size = new System.Drawing.Size(126, 35);
             this.validateButton.TabIndex = 49;
             this.validateButton.Text = "Se connecter";
             this.validateButton.UseVisualStyleBackColor = true;

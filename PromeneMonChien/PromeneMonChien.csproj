@@ -76,6 +76,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="chien.cs" />
+    <Compile Include="DogModify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DogModify.Designer.cs">
+      <DependentUpon>DogModify.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMainAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +153,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Connexion.resx">
       <DependentUpon>Connexion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DogModify.resx">
+      <DependentUpon>DogModify.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMainAdmin.resx">
       <DependentUpon>FormMainAdmin.cs</DependentUpon>

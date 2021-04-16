@@ -164,6 +164,7 @@
             this.modifyDogButton.TabIndex = 7;
             this.modifyDogButton.Text = "Modifier";
             this.modifyDogButton.UseVisualStyleBackColor = true;
+            this.modifyDogButton.Click += new System.EventHandler(this.modifyDogButton_Click);
             // 
             // deleteDogButton
             // 

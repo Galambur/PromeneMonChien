@@ -44,5 +44,11 @@ namespace PromeneMonChien
             f.ShowDialog();
         }
         #endregion
+
+        private void modifyDogButton_Click(object sender, EventArgs e)
+        {
+            DogModify f = new DogModify();
+            f.ShowDialog();
+        }
     }
 }

@@ -168,7 +168,7 @@
             // validateButton
             // 
             this.validateButton.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.validateButton.Location = new System.Drawing.Point(600, 382);
+            this.validateButton.Location = new System.Drawing.Point(704, 398);
             this.validateButton.Name = "validateButton";
             this.validateButton.Size = new System.Drawing.Size(84, 40);
             this.validateButton.TabIndex = 12;
@@ -176,7 +176,7 @@
             this.validateButton.UseVisualStyleBackColor = true;
             this.validateButton.Click += new System.EventHandler(this.validateButton_clicked);
             // 
-            // AddDog
+            // DogAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -192,7 +192,7 @@
             this.Controls.Add(this.userLabel);
             this.Controls.Add(this.comboBoxUser);
             this.Controls.Add(this.createDogTitle);
-            this.Name = "AddDog";
+            this.Name = "DogAdd";
             this.Text = "Promène mon chien";
             this.Load += new System.EventHandler(this.AddDog_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceUser)).EndInit();
