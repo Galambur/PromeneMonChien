@@ -18,7 +18,6 @@ namespace PromeneMonChien
 
         private void validateButton_Click(object sender, EventArgs e)
         {
-            int attempt = 0;
             bool result;
 
             using (MySqlConnection con = new MySqlConnection(myConn))
@@ -38,21 +37,19 @@ namespace PromeneMonChien
 
             if ((emailBox.Text == "g@d") && (passwordBox.Text == "123") && (result == true))
             {
-                attempt = 0;
                 FormMainAdmin f = new FormMainAdmin();
                 this.Hide();
                 f.ShowDialog();
                 this.Close();
             }
-            else if (result == true && attempt < 3)
+            else if (result == true)
             {
                 FormMainUser f = new FormMainUser();
                 this.Hide();
                 f.ShowDialog();
                 this.Close();
-                ++attempt;
             }
-            else if (result == false && attempt < 3)
+            else if (result == false)
             {
                 MessageBox.Show("Email ou mot de passe incorrect");
                 emailBox.Text = String.Empty;
