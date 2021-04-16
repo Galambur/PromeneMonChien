@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserCreate));
             this.createUserTitle = new System.Windows.Forms.Label();
             this.nameLabel = new System.Windows.Forms.Label();
             this.nameBox = new System.Windows.Forms.TextBox();
@@ -258,6 +259,7 @@
             this.Controls.Add(this.nameBox);
             this.Controls.Add(this.nameLabel);
             this.Controls.Add(this.createUserTitle);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "UserCreate";
             this.Text = "Promène mon chien";
             this.Load += new System.EventHandler(this.CreateUser_Load);

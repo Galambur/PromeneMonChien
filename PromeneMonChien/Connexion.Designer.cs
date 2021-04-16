@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Connexion));
             this.connectionTitle = new System.Windows.Forms.Label();
             this.passwordBox = new System.Windows.Forms.TextBox();
             this.passwordLabel = new System.Windows.Forms.Label();
@@ -107,6 +108,7 @@
             this.Controls.Add(this.passwordBox);
             this.Controls.Add(this.passwordLabel);
             this.Controls.Add(this.emailLabel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Connexion";
             this.Text = "Promène mon chien";
             this.ResumeLayout(false);

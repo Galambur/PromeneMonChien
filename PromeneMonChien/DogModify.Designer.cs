@@ -29,26 +29,27 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DogModify));
             this.modifyDogTitle = new System.Windows.Forms.Label();
             this.comboBoxDog = new System.Windows.Forms.ComboBox();
+            this.bindingSourceDog = new System.Windows.Forms.BindingSource(this.components);
+            this.promenemonchienDataSet = new PromeneMonChien.promenemonchienDataSet();
             this.comboBoxType = new System.Windows.Forms.ComboBox();
+            this.bindingSourceType = new System.Windows.Forms.BindingSource(this.components);
             this.typeLabel = new System.Windows.Forms.Label();
             this.proprietaireLabel = new System.Windows.Forms.Label();
             this.nameLabel = new System.Windows.Forms.Label();
-            this.bindingSourceType = new System.Windows.Forms.BindingSource(this.components);
-            this.promenemonchienDataSet = new PromeneMonChien.promenemonchienDataSet();
             this.typeTableAdapter = new PromeneMonChien.promenemonchienDataSetTableAdapters.typeTableAdapter();
-            this.bindingSourceDog = new System.Windows.Forms.BindingSource(this.components);
             this.chienTableAdapter = new PromeneMonChien.promenemonchienDataSetTableAdapters.chienTableAdapter();
             this.comboBoxProprietaire = new System.Windows.Forms.ComboBox();
+            this.bindingSourceProprietaire = new System.Windows.Forms.BindingSource(this.components);
             this.description = new System.Windows.Forms.Label();
             this.descriptionBox = new System.Windows.Forms.TextBox();
-            this.bindingSourceProprietaire = new System.Windows.Forms.BindingSource(this.components);
             this.utilisateurTableAdapter = new PromeneMonChien.promenemonchienDataSetTableAdapters.utilisateurTableAdapter();
             this.validateButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceType)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.promenemonchienDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDog)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.promenemonchienDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceType)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceProprietaire)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,6 +77,16 @@
             this.comboBoxDog.TabIndex = 27;
             this.comboBoxDog.ValueMember = "idChien";
             // 
+            // bindingSourceDog
+            // 
+            this.bindingSourceDog.DataMember = "chien";
+            this.bindingSourceDog.DataSource = this.promenemonchienDataSet;
+            // 
+            // promenemonchienDataSet
+            // 
+            this.promenemonchienDataSet.DataSetName = "promenemonchienDataSet";
+            this.promenemonchienDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // comboBoxType
             // 
             this.comboBoxType.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.bindingSourceDog, "idType", true));
@@ -88,6 +99,11 @@
             this.comboBoxType.Size = new System.Drawing.Size(146, 31);
             this.comboBoxType.TabIndex = 30;
             this.comboBoxType.ValueMember = "idType";
+            // 
+            // bindingSourceType
+            // 
+            this.bindingSourceType.DataMember = "type";
+            this.bindingSourceType.DataSource = this.promenemonchienDataSet;
             // 
             // typeLabel
             // 
@@ -119,24 +135,9 @@
             this.nameLabel.TabIndex = 32;
             this.nameLabel.Text = "Nom";
             // 
-            // bindingSourceType
-            // 
-            this.bindingSourceType.DataMember = "type";
-            this.bindingSourceType.DataSource = this.promenemonchienDataSet;
-            // 
-            // promenemonchienDataSet
-            // 
-            this.promenemonchienDataSet.DataSetName = "promenemonchienDataSet";
-            this.promenemonchienDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // typeTableAdapter
             // 
             this.typeTableAdapter.ClearBeforeFill = true;
-            // 
-            // bindingSourceDog
-            // 
-            this.bindingSourceDog.DataMember = "chien";
-            this.bindingSourceDog.DataSource = this.promenemonchienDataSet;
             // 
             // chienTableAdapter
             // 
@@ -154,6 +155,11 @@
             this.comboBoxProprietaire.Size = new System.Drawing.Size(146, 31);
             this.comboBoxProprietaire.TabIndex = 36;
             this.comboBoxProprietaire.ValueMember = "idUtilisateur";
+            // 
+            // bindingSourceProprietaire
+            // 
+            this.bindingSourceProprietaire.DataMember = "utilisateur";
+            this.bindingSourceProprietaire.DataSource = this.promenemonchienDataSet;
             // 
             // description
             // 
@@ -174,11 +180,6 @@
             this.descriptionBox.Name = "descriptionBox";
             this.descriptionBox.Size = new System.Drawing.Size(233, 85);
             this.descriptionBox.TabIndex = 38;
-            // 
-            // bindingSourceProprietaire
-            // 
-            this.bindingSourceProprietaire.DataMember = "utilisateur";
-            this.bindingSourceProprietaire.DataSource = this.promenemonchienDataSet;
             // 
             // utilisateurTableAdapter
             // 
@@ -211,12 +212,13 @@
             this.Controls.Add(this.proprietaireLabel);
             this.Controls.Add(this.nameLabel);
             this.Controls.Add(this.modifyDogTitle);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DogModify";
             this.Text = "Promène mon chien";
             this.Load += new System.EventHandler(this.DogModify_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceType)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.promenemonchienDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDog)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.promenemonchienDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceType)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceProprietaire)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

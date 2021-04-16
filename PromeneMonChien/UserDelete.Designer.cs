@@ -29,7 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserDelete));
             this.comboBoxUserName = new System.Windows.Forms.ComboBox();
+            this.bindingSourceUsers = new System.Windows.Forms.BindingSource(this.components);
+            this.promenemonchienDataSet = new PromeneMonChien.promenemonchienDataSet();
             this.checkBoxProprietaire = new System.Windows.Forms.CheckBox();
             this.passwordBox = new System.Windows.Forms.TextBox();
             this.passwordLabel = new System.Windows.Forms.Label();
@@ -42,8 +45,6 @@
             this.telephoneLabel = new System.Windows.Forms.Label();
             this.nameLabel = new System.Windows.Forms.Label();
             this.deleteUserTitle = new System.Windows.Forms.Label();
-            this.bindingSourceUsers = new System.Windows.Forms.BindingSource(this.components);
-            this.promenemonchienDataSet = new PromeneMonChien.promenemonchienDataSet();
             this.utilisateurTableAdapter = new PromeneMonChien.promenemonchienDataSetTableAdapters.utilisateurTableAdapter();
             this.bindingSourceCity = new System.Windows.Forms.BindingSource(this.components);
             this.villeTableAdapter = new PromeneMonChien.promenemonchienDataSetTableAdapters.villeTableAdapter();
@@ -65,6 +66,16 @@
             this.comboBoxUserName.Size = new System.Drawing.Size(146, 31);
             this.comboBoxUserName.TabIndex = 29;
             this.comboBoxUserName.ValueMember = "idUtilisateur";
+            // 
+            // bindingSourceUsers
+            // 
+            this.bindingSourceUsers.DataMember = "utilisateur";
+            this.bindingSourceUsers.DataSource = this.promenemonchienDataSet;
+            // 
+            // promenemonchienDataSet
+            // 
+            this.promenemonchienDataSet.DataSetName = "promenemonchienDataSet";
+            this.promenemonchienDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // checkBoxProprietaire
             // 
@@ -191,16 +202,6 @@
             this.deleteUserTitle.Text = "Supprimer un compte utilisateur";
             this.deleteUserTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // bindingSourceUsers
-            // 
-            this.bindingSourceUsers.DataMember = "utilisateur";
-            this.bindingSourceUsers.DataSource = this.promenemonchienDataSet;
-            // 
-            // promenemonchienDataSet
-            // 
-            this.promenemonchienDataSet.DataSetName = "promenemonchienDataSet";
-            this.promenemonchienDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // utilisateurTableAdapter
             // 
             this.utilisateurTableAdapter.ClearBeforeFill = true;
@@ -257,6 +258,7 @@
             this.Controls.Add(this.phoneBox);
             this.Controls.Add(this.telephoneLabel);
             this.Controls.Add(this.nameLabel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "UserDelete";
             this.Text = "Promène mon chien";
             this.Load += new System.EventHandler(this.UserDelete_Load);

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMainAdmin));
             this.mainTitle = new System.Windows.Forms.Label();
             this.clientLabel = new System.Windows.Forms.Label();
             this.dogLabel = new System.Windows.Forms.Label();
@@ -175,6 +176,7 @@
             this.deleteDogButton.TabIndex = 8;
             this.deleteDogButton.Text = "Supprimer";
             this.deleteDogButton.UseVisualStyleBackColor = true;
+            this.deleteDogButton.Click += new System.EventHandler(this.deleteDogButton_Click);
             // 
             // showPromenadesButton
             // 
@@ -195,6 +197,7 @@
             this.addPromenadeButton.TabIndex = 10;
             this.addPromenadeButton.Text = "Ajouter";
             this.addPromenadeButton.UseVisualStyleBackColor = true;
+            this.addPromenadeButton.Click += new System.EventHandler(this.addPromenadeButton_Click);
             // 
             // modifyPromenadeButton
             // 
@@ -238,6 +241,7 @@
             this.Controls.Add(this.dogLabel);
             this.Controls.Add(this.clientLabel);
             this.Controls.Add(this.mainTitle);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormMainAdmin";
             this.Text = "Promène mon chien";
             this.ResumeLayout(false);

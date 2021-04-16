@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DogAdd));
             this.createDogTitle = new System.Windows.Forms.Label();
             this.comboBoxUser = new System.Windows.Forms.ComboBox();
             this.bindingSourceUser = new System.Windows.Forms.BindingSource(this.components);
@@ -192,6 +193,7 @@
             this.Controls.Add(this.userLabel);
             this.Controls.Add(this.comboBoxUser);
             this.Controls.Add(this.createDogTitle);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DogAdd";
             this.Text = "Promène mon chien";
             this.Load += new System.EventHandler(this.AddDog_Load);

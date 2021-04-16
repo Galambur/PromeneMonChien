@@ -50,5 +50,17 @@ namespace PromeneMonChien
             DogModify f = new DogModify();
             f.ShowDialog();
         }
+
+        private void deleteDogButton_Click(object sender, EventArgs e)
+        {
+            DogDelete f = new DogDelete();
+            f.ShowDialog();
+        }
+
+        private void addPromenadeButton_Click(object sender, EventArgs e)
+        {
+            PromenadeCreate f = new PromenadeCreate();
+            f.ShowDialog();
+        }
     }
 }

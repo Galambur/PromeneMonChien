@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PromenadeCreate));
             this.monthCalendarPromenade = new System.Windows.Forms.MonthCalendar();
             this.createPromenadeTitle = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -60,6 +61,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.createPromenadeTitle);
             this.Controls.Add(this.monthCalendarPromenade);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PromenadeCreate";
             this.Text = "Promène mon chien";
             this.ResumeLayout(false);
