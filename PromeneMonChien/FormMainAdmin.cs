@@ -5,9 +5,17 @@ namespace PromeneMonChien
 {
     public partial class FormMainAdmin : Form
     {
+        int adminId;
+
         public FormMainAdmin()
         {
             InitializeComponent();
+        }
+
+        public FormMainAdmin(int id)
+        {
+            InitializeComponent();
+            this.adminId = id;
         }
 
 

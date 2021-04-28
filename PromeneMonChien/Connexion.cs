@@ -9,7 +9,7 @@ namespace PromeneMonChien
     {
         private static string myConn = ConfigurationManager.ConnectionStrings["PromeneMonChien.Properties.Settings.promenemonchienConnectionString"].ConnectionString;
         // on ne spécifie pas l'id car il s'auto incrémentera tout seul à partir du dernier id de la bdd
-        private const string SelectQuery = "SELECT * FROM utilisateur WHERE email = @email AND mdp = @mdp";
+        private const string SelectQuery = "SELECT idUtilisateur FROM utilisateur WHERE email = @email AND mdp = @mdp";
 
         public Connexion()
         {
@@ -19,6 +19,7 @@ namespace PromeneMonChien
         private void validateButton_Click(object sender, EventArgs e)
         {
             bool result;
+            MySqlDataReader user;
 
             using (MySqlConnection con = new MySqlConnection(myConn))
             {
@@ -30,35 +31,32 @@ namespace PromeneMonChien
                     // requête
                     com.Parameters.AddWithValue("@email", emailBox.Text);
                     com.Parameters.AddWithValue("@mdp", passwordBox.Text);
-                    // on exécute la requête
-                    result = com.ExecuteReader().HasRows;
-                }
-            }
 
-            if ((emailBox.Text == "g@d") && (passwordBox.Text == "123") && (result == true))
-            {
-                FormMainAdmin f = new FormMainAdmin();
-                this.Hide();
-                f.ShowDialog();
-                this.Close();
-            }
-            else if (result == true)
-            {
-                FormMainUser f = new FormMainUser();
-                this.Hide();
-                f.ShowDialog();
-                this.Close();
-            }
-            else if (result == false)
-            {
-                MessageBox.Show("Email ou mot de passe incorrect");
-                emailBox.Text = String.Empty;
-                passwordBox.Text = String.Empty;
-            }
-            else
-            {
-                MessageBox.Show("Trop d'essais");
-                this.Close();
+                    // on exécute la requête
+                    user = com.ExecuteReader();
+                    result = user.HasRows;
+                    user.Read();
+                    if ((emailBox.Text == "g@d") && (passwordBox.Text == "123") && (result == true))
+                    {
+                        FormMainAdmin f = new FormMainAdmin(user.GetInt32("idUtilisateur"));
+                        this.Hide();
+                        f.ShowDialog();
+                        this.Close();
+                    }
+                    else if (result == true)
+                    {
+                        FormMainUser f = new FormMainUser(user.GetInt32("idUtilisateur"));
+                        this.Hide();
+                        f.ShowDialog();
+                        this.Close();
+                    }
+                    else if (result == false)
+                    {
+                        MessageBox.Show("Email ou mot de passe incorrect");
+                        emailBox.Text = String.Empty;
+                        passwordBox.Text = String.Empty;
+                    }
+                }
             }
         }
     }
