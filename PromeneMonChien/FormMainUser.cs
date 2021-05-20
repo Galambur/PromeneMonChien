@@ -64,13 +64,15 @@ namespace PromeneMonChien
         private void buttonAddPromenade_Click(object sender, System.EventArgs e)
         {
             UserActionPromenadeAdd f = new UserActionPromenadeAdd(this.userId);
-            f.Show();
+            this.Hide();
+            f.ShowDialog();
         }
 
         private void buttonAddDog_Click(object sender, System.EventArgs e)
         {
             UserActionDogAdd f = new UserActionDogAdd(this.userId);
-            f.Show();
+            this.Hide();
+            f.ShowDialog();
         }
     }
 }

@@ -47,7 +47,9 @@
             // 
             // showDogsTitle
             // 
-            this.showDogsTitle.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.showDogsTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.showDogsTitle.Font = new System.Drawing.Font("Calibri", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.showDogsTitle.Location = new System.Drawing.Point(0, 0);
             this.showDogsTitle.Name = "showDogsTitle";
             this.showDogsTitle.Size = new System.Drawing.Size(800, 100);
@@ -67,6 +69,9 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -78,38 +83,44 @@
             this.dataGridView1.DataSource = this.bindingSourceDogs;
             this.dataGridView1.Location = new System.Drawing.Point(138, 122);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(538, 268);
             this.dataGridView1.TabIndex = 3;
             // 
             // idChienDataGridViewTextBoxColumn
             // 
             this.idChienDataGridViewTextBoxColumn.DataPropertyName = "idChien";
-            this.idChienDataGridViewTextBoxColumn.HeaderText = "idChien";
+            this.idChienDataGridViewTextBoxColumn.HeaderText = "Identifiant";
             this.idChienDataGridViewTextBoxColumn.Name = "idChienDataGridViewTextBoxColumn";
+            this.idChienDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // nomChienDataGridViewTextBoxColumn
             // 
             this.nomChienDataGridViewTextBoxColumn.DataPropertyName = "nomChien";
-            this.nomChienDataGridViewTextBoxColumn.HeaderText = "nomChien";
+            this.nomChienDataGridViewTextBoxColumn.HeaderText = "Nom";
             this.nomChienDataGridViewTextBoxColumn.Name = "nomChienDataGridViewTextBoxColumn";
+            this.nomChienDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // idTypeDataGridViewTextBoxColumn
             // 
             this.idTypeDataGridViewTextBoxColumn.DataPropertyName = "idType";
-            this.idTypeDataGridViewTextBoxColumn.HeaderText = "idType";
+            this.idTypeDataGridViewTextBoxColumn.HeaderText = "Type";
             this.idTypeDataGridViewTextBoxColumn.Name = "idTypeDataGridViewTextBoxColumn";
+            this.idTypeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // idUtilisateurDataGridViewTextBoxColumn
             // 
             this.idUtilisateurDataGridViewTextBoxColumn.DataPropertyName = "idUtilisateur";
-            this.idUtilisateurDataGridViewTextBoxColumn.HeaderText = "idUtilisateur";
+            this.idUtilisateurDataGridViewTextBoxColumn.HeaderText = "Utilisateur";
             this.idUtilisateurDataGridViewTextBoxColumn.Name = "idUtilisateurDataGridViewTextBoxColumn";
+            this.idUtilisateurDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // descriptionDataGridViewTextBoxColumn
             // 
             this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "description";
-            this.descriptionDataGridViewTextBoxColumn.HeaderText = "description";
+            this.descriptionDataGridViewTextBoxColumn.HeaderText = "Description";
             this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
+            this.descriptionDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // chienTableAdapter
             // 
@@ -126,6 +137,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DogsShow";
             this.Text = "Promène mon chien";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.ShowDogs_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDogs)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.promenemonchienDataSet)).EndInit();
@@ -140,11 +152,11 @@
         private System.Windows.Forms.BindingSource bindingSourceDogs;
         private promenemonchienDataSet promenemonchienDataSet;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private promenemonchienDataSetTableAdapters.chienTableAdapter chienTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn idChienDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomChienDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idTypeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idUtilisateurDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
-        private promenemonchienDataSetTableAdapters.chienTableAdapter chienTableAdapter;
     }
 }

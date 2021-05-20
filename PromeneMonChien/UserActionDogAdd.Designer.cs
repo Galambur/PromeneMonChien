@@ -36,10 +36,10 @@
             this.typeLabel = new System.Windows.Forms.Label();
             this.descriptionBox = new System.Windows.Forms.TextBox();
             this.comboBoxDogType = new System.Windows.Forms.ComboBox();
-            this.textBoxDogName = new System.Windows.Forms.TextBox();
-            this.createDogTitle = new System.Windows.Forms.Label();
             this.bindingSourceType = new System.Windows.Forms.BindingSource(this.components);
             this.promenemonchienDataSet = new PromeneMonChien.promenemonchienDataSet();
+            this.textBoxDogName = new System.Windows.Forms.TextBox();
+            this.createDogTitle = new System.Windows.Forms.Label();
             this.typeTableAdapter = new PromeneMonChien.promenemonchienDataSetTableAdapters.typeTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceType)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.promenemonchienDataSet)).BeginInit();
@@ -47,10 +47,11 @@
             // 
             // validateButton
             // 
-            this.validateButton.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.validateButton.Location = new System.Drawing.Point(704, 404);
+            this.validateButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.validateButton.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.validateButton.Location = new System.Drawing.Point(676, 386);
             this.validateButton.Name = "validateButton";
-            this.validateButton.Size = new System.Drawing.Size(84, 40);
+            this.validateButton.Size = new System.Drawing.Size(112, 52);
             this.validateButton.TabIndex = 22;
             this.validateButton.Text = "Valider";
             this.validateButton.UseVisualStyleBackColor = true;
@@ -58,73 +59,59 @@
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(170, 256);
+            this.label4.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(93, 259);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(168, 23);
+            this.label4.Size = new System.Drawing.Size(286, 39);
             this.label4.TabIndex = 21;
             this.label4.Text = "Description du chien";
             // 
             // dogNameLabel
             // 
+            this.dogNameLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dogNameLabel.AutoSize = true;
-            this.dogNameLabel.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dogNameLabel.Location = new System.Drawing.Point(222, 158);
+            this.dogNameLabel.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dogNameLabel.Location = new System.Drawing.Point(179, 120);
             this.dogNameLabel.Name = "dogNameLabel";
-            this.dogNameLabel.Size = new System.Drawing.Size(116, 23);
+            this.dogNameLabel.Size = new System.Drawing.Size(200, 39);
             this.dogNameLabel.TabIndex = 20;
             this.dogNameLabel.Text = "Nom du chien";
             // 
             // typeLabel
             // 
+            this.typeLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.typeLabel.AutoSize = true;
-            this.typeLabel.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.typeLabel.Location = new System.Drawing.Point(224, 206);
+            this.typeLabel.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.typeLabel.Location = new System.Drawing.Point(182, 190);
             this.typeLabel.Name = "typeLabel";
-            this.typeLabel.Size = new System.Drawing.Size(114, 23);
+            this.typeLabel.Size = new System.Drawing.Size(197, 39);
             this.typeLabel.TabIndex = 19;
             this.typeLabel.Text = "Type de chien";
             // 
             // descriptionBox
             // 
-            this.descriptionBox.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.descriptionBox.Location = new System.Drawing.Point(363, 253);
+            this.descriptionBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.descriptionBox.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.descriptionBox.Location = new System.Drawing.Point(404, 256);
             this.descriptionBox.Multiline = true;
             this.descriptionBox.Name = "descriptionBox";
-            this.descriptionBox.Size = new System.Drawing.Size(233, 85);
+            this.descriptionBox.Size = new System.Drawing.Size(308, 114);
             this.descriptionBox.TabIndex = 17;
             // 
             // comboBoxDogType
             // 
+            this.comboBoxDogType.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBoxDogType.DataSource = this.bindingSourceType;
             this.comboBoxDogType.DisplayMember = "nomType";
-            this.comboBoxDogType.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxDogType.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxDogType.FormattingEnabled = true;
-            this.comboBoxDogType.Location = new System.Drawing.Point(363, 203);
+            this.comboBoxDogType.Location = new System.Drawing.Point(404, 187);
             this.comboBoxDogType.Name = "comboBoxDogType";
-            this.comboBoxDogType.Size = new System.Drawing.Size(146, 31);
+            this.comboBoxDogType.Size = new System.Drawing.Size(249, 47);
             this.comboBoxDogType.TabIndex = 16;
             this.comboBoxDogType.ValueMember = "idType";
-            // 
-            // textBoxDogName
-            // 
-            this.textBoxDogName.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxDogName.Location = new System.Drawing.Point(363, 155);
-            this.textBoxDogName.Name = "textBoxDogName";
-            this.textBoxDogName.Size = new System.Drawing.Size(146, 31);
-            this.textBoxDogName.TabIndex = 14;
-            // 
-            // createDogTitle
-            // 
-            this.createDogTitle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.createDogTitle.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.createDogTitle.Location = new System.Drawing.Point(0, 0);
-            this.createDogTitle.Name = "createDogTitle";
-            this.createDogTitle.Size = new System.Drawing.Size(800, 100);
-            this.createDogTitle.TabIndex = 15;
-            this.createDogTitle.Text = "Ajouter un chien";
-            this.createDogTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // bindingSourceType
             // 
@@ -135,6 +122,26 @@
             // 
             this.promenemonchienDataSet.DataSetName = "promenemonchienDataSet";
             this.promenemonchienDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // textBoxDogName
+            // 
+            this.textBoxDogName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxDogName.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxDogName.Location = new System.Drawing.Point(404, 117);
+            this.textBoxDogName.Name = "textBoxDogName";
+            this.textBoxDogName.Size = new System.Drawing.Size(249, 47);
+            this.textBoxDogName.TabIndex = 14;
+            // 
+            // createDogTitle
+            // 
+            this.createDogTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.createDogTitle.Font = new System.Drawing.Font("Calibri", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.createDogTitle.Location = new System.Drawing.Point(0, 0);
+            this.createDogTitle.Name = "createDogTitle";
+            this.createDogTitle.Size = new System.Drawing.Size(800, 100);
+            this.createDogTitle.TabIndex = 15;
+            this.createDogTitle.Text = "Ajouter un chien";
+            this.createDogTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // typeTableAdapter
             // 
@@ -157,6 +164,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "UserActionDogAdd";
             this.Text = "Promène mon chien";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.UserActionDogAdd_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceType)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.promenemonchienDataSet)).EndInit();

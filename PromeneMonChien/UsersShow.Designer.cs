@@ -52,7 +52,9 @@
             // 
             // showUsersTitle
             // 
-            this.showUsersTitle.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.showUsersTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.showUsersTitle.Font = new System.Drawing.Font("Calibri", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.showUsersTitle.Location = new System.Drawing.Point(0, 0);
             this.showUsersTitle.Name = "showUsersTitle";
             this.showUsersTitle.Size = new System.Drawing.Size(800, 100);
@@ -62,6 +64,9 @@
             // 
             // dataGridViewUsers
             // 
+            this.dataGridViewUsers.AllowUserToAddRows = false;
+            this.dataGridViewUsers.AllowUserToDeleteRows = false;
+            this.dataGridViewUsers.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.dataGridViewUsers.AutoGenerateColumns = false;
             this.dataGridViewUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewUsers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -83,56 +88,56 @@
             // idUtilisateurDataGridViewTextBoxColumn
             // 
             this.idUtilisateurDataGridViewTextBoxColumn.DataPropertyName = "idUtilisateur";
-            this.idUtilisateurDataGridViewTextBoxColumn.HeaderText = "idUtilisateur";
+            this.idUtilisateurDataGridViewTextBoxColumn.HeaderText = "Identifiant";
             this.idUtilisateurDataGridViewTextBoxColumn.Name = "idUtilisateurDataGridViewTextBoxColumn";
             this.idUtilisateurDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // nomUtilisateurDataGridViewTextBoxColumn
             // 
             this.nomUtilisateurDataGridViewTextBoxColumn.DataPropertyName = "nomUtilisateur";
-            this.nomUtilisateurDataGridViewTextBoxColumn.HeaderText = "nomUtilisateur";
+            this.nomUtilisateurDataGridViewTextBoxColumn.HeaderText = "Nom";
             this.nomUtilisateurDataGridViewTextBoxColumn.Name = "nomUtilisateurDataGridViewTextBoxColumn";
             this.nomUtilisateurDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // prenomUtilisateurDataGridViewTextBoxColumn
             // 
             this.prenomUtilisateurDataGridViewTextBoxColumn.DataPropertyName = "prenomUtilisateur";
-            this.prenomUtilisateurDataGridViewTextBoxColumn.HeaderText = "prenomUtilisateur";
+            this.prenomUtilisateurDataGridViewTextBoxColumn.HeaderText = "Prénom";
             this.prenomUtilisateurDataGridViewTextBoxColumn.Name = "prenomUtilisateurDataGridViewTextBoxColumn";
             this.prenomUtilisateurDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // proprietaireDataGridViewCheckBoxColumn
             // 
             this.proprietaireDataGridViewCheckBoxColumn.DataPropertyName = "proprietaire";
-            this.proprietaireDataGridViewCheckBoxColumn.HeaderText = "proprietaire";
+            this.proprietaireDataGridViewCheckBoxColumn.HeaderText = "Propriétaire";
             this.proprietaireDataGridViewCheckBoxColumn.Name = "proprietaireDataGridViewCheckBoxColumn";
             this.proprietaireDataGridViewCheckBoxColumn.ReadOnly = true;
             // 
             // idVilleDataGridViewTextBoxColumn
             // 
             this.idVilleDataGridViewTextBoxColumn.DataPropertyName = "idVille";
-            this.idVilleDataGridViewTextBoxColumn.HeaderText = "idVille";
+            this.idVilleDataGridViewTextBoxColumn.HeaderText = "Ville";
             this.idVilleDataGridViewTextBoxColumn.Name = "idVilleDataGridViewTextBoxColumn";
             this.idVilleDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // telephoneDataGridViewTextBoxColumn
             // 
             this.telephoneDataGridViewTextBoxColumn.DataPropertyName = "telephone";
-            this.telephoneDataGridViewTextBoxColumn.HeaderText = "telephone";
+            this.telephoneDataGridViewTextBoxColumn.HeaderText = "Telephone";
             this.telephoneDataGridViewTextBoxColumn.Name = "telephoneDataGridViewTextBoxColumn";
             this.telephoneDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // emailDataGridViewTextBoxColumn
             // 
             this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
             this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
             this.emailDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // mdpDataGridViewTextBoxColumn
             // 
             this.mdpDataGridViewTextBoxColumn.DataPropertyName = "mdp";
-            this.mdpDataGridViewTextBoxColumn.HeaderText = "mdp";
+            this.mdpDataGridViewTextBoxColumn.HeaderText = "Mot de passe";
             this.mdpDataGridViewTextBoxColumn.Name = "mdpDataGridViewTextBoxColumn";
             this.mdpDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -166,6 +171,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "UsersShow";
             this.Text = "Promène mon chien";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.ShowUsers_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.utilisateurBindingSource)).EndInit();

@@ -50,53 +50,57 @@
             // mainTitle
             // 
             this.mainTitle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.mainTitle.Font = new System.Drawing.Font("Calibri", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mainTitle.Font = new System.Drawing.Font("Calibri", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mainTitle.Location = new System.Drawing.Point(0, 0);
             this.mainTitle.Name = "mainTitle";
-            this.mainTitle.Size = new System.Drawing.Size(800, 100);
+            this.mainTitle.Size = new System.Drawing.Size(1074, 100);
             this.mainTitle.TabIndex = 1;
             this.mainTitle.Text = "Bienvenue sur Promène mon chien ! ";
             this.mainTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // clientLabel
             // 
+            this.clientLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.clientLabel.AutoSize = true;
-            this.clientLabel.Font = new System.Drawing.Font("Calibri", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clientLabel.Font = new System.Drawing.Font("Calibri", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clientLabel.ForeColor = System.Drawing.Color.DarkGreen;
-            this.clientLabel.Location = new System.Drawing.Point(84, 100);
+            this.clientLabel.Location = new System.Drawing.Point(207, 164);
             this.clientLabel.Name = "clientLabel";
-            this.clientLabel.Size = new System.Drawing.Size(69, 26);
+            this.clientLabel.Size = new System.Drawing.Size(115, 42);
             this.clientLabel.TabIndex = 3;
             this.clientLabel.Text = "Clients";
             // 
             // dogLabel
             // 
+            this.dogLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dogLabel.AutoSize = true;
-            this.dogLabel.Font = new System.Drawing.Font("Calibri", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dogLabel.Font = new System.Drawing.Font("Calibri", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dogLabel.ForeColor = System.Drawing.Color.DarkGreen;
-            this.dogLabel.Location = new System.Drawing.Point(356, 100);
+            this.dogLabel.Location = new System.Drawing.Point(479, 164);
             this.dogLabel.Name = "dogLabel";
-            this.dogLabel.Size = new System.Drawing.Size(68, 26);
+            this.dogLabel.Size = new System.Drawing.Size(112, 42);
             this.dogLabel.TabIndex = 4;
             this.dogLabel.Text = "Chiens";
             // 
             // promenadeLabel
             // 
+            this.promenadeLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.promenadeLabel.AutoSize = true;
-            this.promenadeLabel.Font = new System.Drawing.Font("Calibri", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.promenadeLabel.Font = new System.Drawing.Font("Calibri", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.promenadeLabel.ForeColor = System.Drawing.Color.DarkGreen;
-            this.promenadeLabel.Location = new System.Drawing.Point(612, 100);
+            this.promenadeLabel.Location = new System.Drawing.Point(710, 164);
             this.promenadeLabel.Name = "promenadeLabel";
-            this.promenadeLabel.Size = new System.Drawing.Size(119, 26);
+            this.promenadeLabel.Size = new System.Drawing.Size(197, 42);
             this.promenadeLabel.TabIndex = 5;
             this.promenadeLabel.Text = "Promenades";
             // 
             // addUserButton
             // 
-            this.addUserButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addUserButton.Location = new System.Drawing.Point(69, 244);
+            this.addUserButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.addUserButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addUserButton.Location = new System.Drawing.Point(176, 306);
             this.addUserButton.Name = "addUserButton";
-            this.addUserButton.Size = new System.Drawing.Size(98, 36);
+            this.addUserButton.Size = new System.Drawing.Size(170, 48);
             this.addUserButton.TabIndex = 2;
             this.addUserButton.Text = "Ajouter";
             this.addUserButton.UseVisualStyleBackColor = true;
@@ -104,10 +108,11 @@
             // 
             // modifyUserButton
             // 
-            this.modifyUserButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modifyUserButton.Location = new System.Drawing.Point(69, 308);
+            this.modifyUserButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.modifyUserButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.modifyUserButton.Location = new System.Drawing.Point(176, 370);
             this.modifyUserButton.Name = "modifyUserButton";
-            this.modifyUserButton.Size = new System.Drawing.Size(98, 36);
+            this.modifyUserButton.Size = new System.Drawing.Size(170, 48);
             this.modifyUserButton.TabIndex = 3;
             this.modifyUserButton.Text = "Modifier";
             this.modifyUserButton.UseVisualStyleBackColor = true;
@@ -115,10 +120,11 @@
             // 
             // deleteUserButton
             // 
-            this.deleteUserButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deleteUserButton.Location = new System.Drawing.Point(69, 368);
+            this.deleteUserButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.deleteUserButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteUserButton.Location = new System.Drawing.Point(176, 430);
             this.deleteUserButton.Name = "deleteUserButton";
-            this.deleteUserButton.Size = new System.Drawing.Size(98, 36);
+            this.deleteUserButton.Size = new System.Drawing.Size(170, 48);
             this.deleteUserButton.TabIndex = 4;
             this.deleteUserButton.Text = "Supprimer";
             this.deleteUserButton.UseVisualStyleBackColor = true;
@@ -126,10 +132,11 @@
             // 
             // showUserButton
             // 
-            this.showUserButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.showUserButton.Location = new System.Drawing.Point(69, 176);
+            this.showUserButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.showUserButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.showUserButton.Location = new System.Drawing.Point(176, 238);
             this.showUserButton.Name = "showUserButton";
-            this.showUserButton.Size = new System.Drawing.Size(98, 36);
+            this.showUserButton.Size = new System.Drawing.Size(170, 48);
             this.showUserButton.TabIndex = 1;
             this.showUserButton.Text = "Afficher";
             this.showUserButton.UseVisualStyleBackColor = true;
@@ -137,10 +144,11 @@
             // 
             // showDogsButton
             // 
-            this.showDogsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.showDogsButton.Location = new System.Drawing.Point(344, 176);
+            this.showDogsButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.showDogsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.showDogsButton.Location = new System.Drawing.Point(451, 238);
             this.showDogsButton.Name = "showDogsButton";
-            this.showDogsButton.Size = new System.Drawing.Size(98, 36);
+            this.showDogsButton.Size = new System.Drawing.Size(170, 48);
             this.showDogsButton.TabIndex = 5;
             this.showDogsButton.Text = "Afficher";
             this.showDogsButton.UseVisualStyleBackColor = true;
@@ -148,10 +156,11 @@
             // 
             // addDogButton
             // 
-            this.addDogButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addDogButton.Location = new System.Drawing.Point(344, 244);
+            this.addDogButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.addDogButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addDogButton.Location = new System.Drawing.Point(451, 306);
             this.addDogButton.Name = "addDogButton";
-            this.addDogButton.Size = new System.Drawing.Size(98, 36);
+            this.addDogButton.Size = new System.Drawing.Size(170, 48);
             this.addDogButton.TabIndex = 6;
             this.addDogButton.Text = "Ajouter";
             this.addDogButton.UseVisualStyleBackColor = true;
@@ -159,10 +168,11 @@
             // 
             // modifyDogButton
             // 
-            this.modifyDogButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modifyDogButton.Location = new System.Drawing.Point(344, 308);
+            this.modifyDogButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.modifyDogButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.modifyDogButton.Location = new System.Drawing.Point(451, 370);
             this.modifyDogButton.Name = "modifyDogButton";
-            this.modifyDogButton.Size = new System.Drawing.Size(98, 36);
+            this.modifyDogButton.Size = new System.Drawing.Size(170, 48);
             this.modifyDogButton.TabIndex = 7;
             this.modifyDogButton.Text = "Modifier";
             this.modifyDogButton.UseVisualStyleBackColor = true;
@@ -170,10 +180,11 @@
             // 
             // deleteDogButton
             // 
-            this.deleteDogButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deleteDogButton.Location = new System.Drawing.Point(344, 368);
+            this.deleteDogButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.deleteDogButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteDogButton.Location = new System.Drawing.Point(451, 430);
             this.deleteDogButton.Name = "deleteDogButton";
-            this.deleteDogButton.Size = new System.Drawing.Size(98, 36);
+            this.deleteDogButton.Size = new System.Drawing.Size(170, 48);
             this.deleteDogButton.TabIndex = 8;
             this.deleteDogButton.Text = "Supprimer";
             this.deleteDogButton.UseVisualStyleBackColor = true;
@@ -181,10 +192,11 @@
             // 
             // showPromenadesButton
             // 
-            this.showPromenadesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.showPromenadesButton.Location = new System.Drawing.Point(620, 176);
+            this.showPromenadesButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.showPromenadesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.showPromenadesButton.Location = new System.Drawing.Point(727, 238);
             this.showPromenadesButton.Name = "showPromenadesButton";
-            this.showPromenadesButton.Size = new System.Drawing.Size(98, 36);
+            this.showPromenadesButton.Size = new System.Drawing.Size(170, 48);
             this.showPromenadesButton.TabIndex = 9;
             this.showPromenadesButton.Text = "Afficher";
             this.showPromenadesButton.UseVisualStyleBackColor = true;
@@ -192,10 +204,11 @@
             // 
             // addPromenadeButton
             // 
-            this.addPromenadeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addPromenadeButton.Location = new System.Drawing.Point(620, 244);
+            this.addPromenadeButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.addPromenadeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addPromenadeButton.Location = new System.Drawing.Point(727, 306);
             this.addPromenadeButton.Name = "addPromenadeButton";
-            this.addPromenadeButton.Size = new System.Drawing.Size(98, 36);
+            this.addPromenadeButton.Size = new System.Drawing.Size(170, 48);
             this.addPromenadeButton.TabIndex = 10;
             this.addPromenadeButton.Text = "Ajouter";
             this.addPromenadeButton.UseVisualStyleBackColor = true;
@@ -203,10 +216,11 @@
             // 
             // modifyPromenadeButton
             // 
-            this.modifyPromenadeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modifyPromenadeButton.Location = new System.Drawing.Point(620, 308);
+            this.modifyPromenadeButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.modifyPromenadeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.modifyPromenadeButton.Location = new System.Drawing.Point(727, 370);
             this.modifyPromenadeButton.Name = "modifyPromenadeButton";
-            this.modifyPromenadeButton.Size = new System.Drawing.Size(98, 36);
+            this.modifyPromenadeButton.Size = new System.Drawing.Size(170, 48);
             this.modifyPromenadeButton.TabIndex = 11;
             this.modifyPromenadeButton.Text = "Modifier";
             this.modifyPromenadeButton.UseVisualStyleBackColor = true;
@@ -214,10 +228,11 @@
             // 
             // deletePromenadeButton
             // 
-            this.deletePromenadeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deletePromenadeButton.Location = new System.Drawing.Point(620, 368);
+            this.deletePromenadeButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.deletePromenadeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deletePromenadeButton.Location = new System.Drawing.Point(727, 430);
             this.deletePromenadeButton.Name = "deletePromenadeButton";
-            this.deletePromenadeButton.Size = new System.Drawing.Size(98, 36);
+            this.deletePromenadeButton.Size = new System.Drawing.Size(170, 48);
             this.deletePromenadeButton.TabIndex = 12;
             this.deletePromenadeButton.Text = "Supprimer";
             this.deletePromenadeButton.UseVisualStyleBackColor = true;
@@ -228,7 +243,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MintCream;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1074, 627);
             this.Controls.Add(this.deletePromenadeButton);
             this.Controls.Add(this.modifyPromenadeButton);
             this.Controls.Add(this.addPromenadeButton);
@@ -248,6 +263,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormMainAdmin";
             this.Text = "Promène mon chien";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
             this.PerformLayout();
 

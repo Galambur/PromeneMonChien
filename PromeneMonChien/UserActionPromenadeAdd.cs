@@ -50,6 +50,9 @@ namespace PromeneMonChien
                 }
             }
             // fermeture de la fenêtre
+            FormMainUser f = new FormMainUser(this.userId);
+            this.Hide();
+            f.ShowDialog();
             this.Close();
 
         }

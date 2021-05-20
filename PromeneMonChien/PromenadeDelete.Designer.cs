@@ -32,20 +32,20 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PromenadeDelete));
             this.validateButton = new System.Windows.Forms.Button();
             this.comboBoxDog = new System.Windows.Forms.ComboBox();
+            this.bindingSourcePromenade = new System.Windows.Forms.BindingSource(this.components);
+            this.promenemonchienDataSet = new PromeneMonChien.promenemonchienDataSet();
+            this.bindingSourceDog = new System.Windows.Forms.BindingSource(this.components);
             this.labelUser = new System.Windows.Forms.Label();
             this.comboBoxUser = new System.Windows.Forms.ComboBox();
+            this.bindingSourceUser = new System.Windows.Forms.BindingSource(this.components);
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.labelDog = new System.Windows.Forms.Label();
             this.comboBoxId = new System.Windows.Forms.ComboBox();
             this.dateLabel = new System.Windows.Forms.Label();
             this.idPromenadeLabel = new System.Windows.Forms.Label();
             this.deletePromenadeTitle = new System.Windows.Forms.Label();
-            this.bindingSourcePromenade = new System.Windows.Forms.BindingSource(this.components);
-            this.promenemonchienDataSet = new PromeneMonChien.promenemonchienDataSet();
             this.promenadeTableAdapter = new PromeneMonChien.promenemonchienDataSetTableAdapters.promenadeTableAdapter();
-            this.bindingSourceDog = new System.Windows.Forms.BindingSource(this.components);
             this.chienTableAdapter = new PromeneMonChien.promenemonchienDataSetTableAdapters.chienTableAdapter();
-            this.bindingSourceUser = new System.Windows.Forms.BindingSource(this.components);
             this.utilisateurTableAdapter = new PromeneMonChien.promenemonchienDataSetTableAdapters.utilisateurTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourcePromenade)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.promenemonchienDataSet)).BeginInit();
@@ -55,10 +55,11 @@
             // 
             // validateButton
             // 
-            this.validateButton.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.validateButton.Location = new System.Drawing.Point(696, 411);
+            this.validateButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.validateButton.Font = new System.Drawing.Font("Arial Narrow", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.validateButton.Location = new System.Drawing.Point(680, 394);
             this.validateButton.Name = "validateButton";
-            this.validateButton.Size = new System.Drawing.Size(92, 33);
+            this.validateButton.Size = new System.Drawing.Size(108, 44);
             this.validateButton.TabIndex = 49;
             this.validateButton.Text = "Valider";
             this.validateButton.UseVisualStyleBackColor = true;
@@ -66,108 +67,18 @@
             // 
             // comboBoxDog
             // 
+            this.comboBoxDog.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBoxDog.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.bindingSourcePromenade, "idChien", true));
             this.comboBoxDog.DataSource = this.bindingSourceDog;
             this.comboBoxDog.DisplayMember = "nomChien";
             this.comboBoxDog.Enabled = false;
-            this.comboBoxDog.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxDog.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxDog.FormattingEnabled = true;
-            this.comboBoxDog.Location = new System.Drawing.Point(377, 238);
+            this.comboBoxDog.Location = new System.Drawing.Point(359, 273);
             this.comboBoxDog.Name = "comboBoxDog";
-            this.comboBoxDog.Size = new System.Drawing.Size(146, 31);
+            this.comboBoxDog.Size = new System.Drawing.Size(249, 47);
             this.comboBoxDog.TabIndex = 42;
             this.comboBoxDog.ValueMember = "idChien";
-            // 
-            // labelUser
-            // 
-            this.labelUser.AutoSize = true;
-            this.labelUser.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelUser.Location = new System.Drawing.Point(254, 292);
-            this.labelUser.Name = "labelUser";
-            this.labelUser.Size = new System.Drawing.Size(97, 23);
-            this.labelUser.TabIndex = 48;
-            this.labelUser.Text = "Promeneur";
-            // 
-            // comboBoxUser
-            // 
-            this.comboBoxUser.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.bindingSourcePromenade, "idUtilisateur", true));
-            this.comboBoxUser.DataSource = this.bindingSourceUser;
-            this.comboBoxUser.DisplayMember = "nomUtilisateur";
-            this.comboBoxUser.Enabled = false;
-            this.comboBoxUser.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxUser.FormattingEnabled = true;
-            this.comboBoxUser.Location = new System.Drawing.Point(377, 289);
-            this.comboBoxUser.Name = "comboBoxUser";
-            this.comboBoxUser.Size = new System.Drawing.Size(146, 31);
-            this.comboBoxUser.TabIndex = 43;
-            this.comboBoxUser.ValueMember = "idUtilisateur";
-            // 
-            // dateTimePicker
-            // 
-            this.dateTimePicker.Checked = false;
-            this.dateTimePicker.CustomFormat = "yyyy-mm-dd hh:mm";
-            this.dateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.bindingSourcePromenade, "datePromenade", true));
-            this.dateTimePicker.Enabled = false;
-            this.dateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker.Location = new System.Drawing.Point(377, 188);
-            this.dateTimePicker.MaxDate = new System.DateTime(2040, 12, 31, 0, 0, 0, 0);
-            this.dateTimePicker.MinDate = new System.DateTime(2021, 1, 1, 0, 0, 0, 0);
-            this.dateTimePicker.Name = "dateTimePicker";
-            this.dateTimePicker.Size = new System.Drawing.Size(180, 26);
-            this.dateTimePicker.TabIndex = 41;
-            // 
-            // labelDog
-            // 
-            this.labelDog.AutoSize = true;
-            this.labelDog.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDog.Location = new System.Drawing.Point(298, 241);
-            this.labelDog.Name = "labelDog";
-            this.labelDog.Size = new System.Drawing.Size(53, 23);
-            this.labelDog.TabIndex = 47;
-            this.labelDog.Text = "Chien";
-            // 
-            // comboBoxId
-            // 
-            this.comboBoxId.DataSource = this.bindingSourcePromenade;
-            this.comboBoxId.DisplayMember = "idPromenade";
-            this.comboBoxId.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxId.FormattingEnabled = true;
-            this.comboBoxId.Location = new System.Drawing.Point(377, 133);
-            this.comboBoxId.Name = "comboBoxId";
-            this.comboBoxId.Size = new System.Drawing.Size(146, 31);
-            this.comboBoxId.TabIndex = 40;
-            this.comboBoxId.ValueMember = "idPromenade";
-            // 
-            // dateLabel
-            // 
-            this.dateLabel.AutoSize = true;
-            this.dateLabel.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateLabel.Location = new System.Drawing.Point(305, 191);
-            this.dateLabel.Name = "dateLabel";
-            this.dateLabel.Size = new System.Drawing.Size(46, 23);
-            this.dateLabel.TabIndex = 46;
-            this.dateLabel.Text = "Date";
-            // 
-            // idPromenadeLabel
-            // 
-            this.idPromenadeLabel.AutoSize = true;
-            this.idPromenadeLabel.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idPromenadeLabel.Location = new System.Drawing.Point(260, 136);
-            this.idPromenadeLabel.Name = "idPromenadeLabel";
-            this.idPromenadeLabel.Size = new System.Drawing.Size(91, 23);
-            this.idPromenadeLabel.TabIndex = 45;
-            this.idPromenadeLabel.Text = "Identifiant";
-            // 
-            // deletePromenadeTitle
-            // 
-            this.deletePromenadeTitle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.deletePromenadeTitle.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deletePromenadeTitle.Location = new System.Drawing.Point(0, 0);
-            this.deletePromenadeTitle.Name = "deletePromenadeTitle";
-            this.deletePromenadeTitle.Size = new System.Drawing.Size(800, 100);
-            this.deletePromenadeTitle.TabIndex = 44;
-            this.deletePromenadeTitle.Text = "Supprimer une promenade";
-            this.deletePromenadeTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // bindingSourcePromenade
             // 
@@ -179,23 +90,121 @@
             this.promenemonchienDataSet.DataSetName = "promenemonchienDataSet";
             this.promenemonchienDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // promenadeTableAdapter
-            // 
-            this.promenadeTableAdapter.ClearBeforeFill = true;
-            // 
             // bindingSourceDog
             // 
             this.bindingSourceDog.DataMember = "chien";
             this.bindingSourceDog.DataSource = this.promenemonchienDataSet;
             // 
-            // chienTableAdapter
+            // labelUser
             // 
-            this.chienTableAdapter.ClearBeforeFill = true;
+            this.labelUser.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelUser.AutoSize = true;
+            this.labelUser.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUser.Location = new System.Drawing.Point(162, 346);
+            this.labelUser.Name = "labelUser";
+            this.labelUser.Size = new System.Drawing.Size(164, 39);
+            this.labelUser.TabIndex = 48;
+            this.labelUser.Text = "Promeneur";
+            // 
+            // comboBoxUser
+            // 
+            this.comboBoxUser.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBoxUser.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.bindingSourcePromenade, "idUtilisateur", true));
+            this.comboBoxUser.DataSource = this.bindingSourceUser;
+            this.comboBoxUser.DisplayMember = "nomUtilisateur";
+            this.comboBoxUser.Enabled = false;
+            this.comboBoxUser.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxUser.FormattingEnabled = true;
+            this.comboBoxUser.Location = new System.Drawing.Point(359, 343);
+            this.comboBoxUser.Name = "comboBoxUser";
+            this.comboBoxUser.Size = new System.Drawing.Size(249, 47);
+            this.comboBoxUser.TabIndex = 43;
+            this.comboBoxUser.ValueMember = "idUtilisateur";
             // 
             // bindingSourceUser
             // 
             this.bindingSourceUser.DataMember = "utilisateur";
             this.bindingSourceUser.DataSource = this.promenemonchienDataSet;
+            // 
+            // dateTimePicker
+            // 
+            this.dateTimePicker.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dateTimePicker.Checked = false;
+            this.dateTimePicker.CustomFormat = "yyyy-mm-dd hh:mm";
+            this.dateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.bindingSourcePromenade, "datePromenade", true));
+            this.dateTimePicker.Enabled = false;
+            this.dateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker.Location = new System.Drawing.Point(359, 208);
+            this.dateTimePicker.MaxDate = new System.DateTime(2040, 12, 31, 0, 0, 0, 0);
+            this.dateTimePicker.MinDate = new System.DateTime(2021, 1, 1, 0, 0, 0, 0);
+            this.dateTimePicker.Name = "dateTimePicker";
+            this.dateTimePicker.Size = new System.Drawing.Size(249, 31);
+            this.dateTimePicker.TabIndex = 41;
+            // 
+            // labelDog
+            // 
+            this.labelDog.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelDog.AutoSize = true;
+            this.labelDog.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDog.Location = new System.Drawing.Point(235, 276);
+            this.labelDog.Name = "labelDog";
+            this.labelDog.Size = new System.Drawing.Size(91, 39);
+            this.labelDog.TabIndex = 47;
+            this.labelDog.Text = "Chien";
+            // 
+            // comboBoxId
+            // 
+            this.comboBoxId.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBoxId.DataSource = this.bindingSourcePromenade;
+            this.comboBoxId.DisplayMember = "idPromenade";
+            this.comboBoxId.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxId.FormattingEnabled = true;
+            this.comboBoxId.Location = new System.Drawing.Point(359, 132);
+            this.comboBoxId.Name = "comboBoxId";
+            this.comboBoxId.Size = new System.Drawing.Size(249, 47);
+            this.comboBoxId.TabIndex = 40;
+            this.comboBoxId.ValueMember = "idPromenade";
+            // 
+            // dateLabel
+            // 
+            this.dateLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dateLabel.AutoSize = true;
+            this.dateLabel.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateLabel.Location = new System.Drawing.Point(247, 203);
+            this.dateLabel.Name = "dateLabel";
+            this.dateLabel.Size = new System.Drawing.Size(79, 39);
+            this.dateLabel.TabIndex = 46;
+            this.dateLabel.Text = "Date";
+            // 
+            // idPromenadeLabel
+            // 
+            this.idPromenadeLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.idPromenadeLabel.AutoSize = true;
+            this.idPromenadeLabel.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idPromenadeLabel.Location = new System.Drawing.Point(173, 135);
+            this.idPromenadeLabel.Name = "idPromenadeLabel";
+            this.idPromenadeLabel.Size = new System.Drawing.Size(153, 39);
+            this.idPromenadeLabel.TabIndex = 45;
+            this.idPromenadeLabel.Text = "Identifiant";
+            // 
+            // deletePromenadeTitle
+            // 
+            this.deletePromenadeTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.deletePromenadeTitle.Font = new System.Drawing.Font("Calibri", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deletePromenadeTitle.Location = new System.Drawing.Point(0, 0);
+            this.deletePromenadeTitle.Name = "deletePromenadeTitle";
+            this.deletePromenadeTitle.Size = new System.Drawing.Size(800, 100);
+            this.deletePromenadeTitle.TabIndex = 44;
+            this.deletePromenadeTitle.Text = "Supprimer une promenade";
+            this.deletePromenadeTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // promenadeTableAdapter
+            // 
+            this.promenadeTableAdapter.ClearBeforeFill = true;
+            // 
+            // chienTableAdapter
+            // 
+            this.chienTableAdapter.ClearBeforeFill = true;
             // 
             // utilisateurTableAdapter
             // 
@@ -220,6 +229,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PromenadeDelete";
             this.Text = "Promène mon chien";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.PromenadeDelete_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourcePromenade)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.promenemonchienDataSet)).EndInit();

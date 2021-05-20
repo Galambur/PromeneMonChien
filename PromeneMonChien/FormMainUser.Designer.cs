@@ -57,20 +57,21 @@
             // mainTitle
             // 
             this.mainTitle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.mainTitle.Font = new System.Drawing.Font("Calibri", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mainTitle.Font = new System.Drawing.Font("Calibri", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mainTitle.Location = new System.Drawing.Point(0, 0);
             this.mainTitle.Name = "mainTitle";
-            this.mainTitle.Size = new System.Drawing.Size(800, 100);
+            this.mainTitle.Size = new System.Drawing.Size(1136, 100);
             this.mainTitle.TabIndex = 0;
-            this.mainTitle.Text = "Bienvenue sur Promène mon chien ! user";
+            this.mainTitle.Text = "Bienvenue sur Promène mon chien !";
             this.mainTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // buttonAddDog
             // 
-            this.buttonAddDog.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAddDog.Location = new System.Drawing.Point(120, 380);
+            this.buttonAddDog.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.buttonAddDog.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAddDog.Location = new System.Drawing.Point(106, 470);
             this.buttonAddDog.Name = "buttonAddDog";
-            this.buttonAddDog.Size = new System.Drawing.Size(161, 37);
+            this.buttonAddDog.Size = new System.Drawing.Size(314, 46);
             this.buttonAddDog.TabIndex = 1;
             this.buttonAddDog.Text = "Ajouter mes chiens";
             this.buttonAddDog.UseVisualStyleBackColor = true;
@@ -80,11 +81,11 @@
             // 
             this.dataGridViewDogs.AllowUserToAddRows = false;
             this.dataGridViewDogs.AllowUserToDeleteRows = false;
+            this.dataGridViewDogs.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.dataGridViewDogs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewDogs.Location = new System.Drawing.Point(33, 103);
+            this.dataGridViewDogs.Location = new System.Drawing.Point(92, 119);
             this.dataGridViewDogs.Name = "dataGridViewDogs";
-            this.dataGridViewDogs.ReadOnly = true;
-            this.dataGridViewDogs.Size = new System.Drawing.Size(344, 246);
+            this.dataGridViewDogs.Size = new System.Drawing.Size(344, 322);
             this.dataGridViewDogs.TabIndex = 2;
             // 
             // bindingSourceDog
@@ -114,10 +115,11 @@
             // 
             // buttonAddPromenade
             // 
-            this.buttonAddPromenade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAddPromenade.Location = new System.Drawing.Point(520, 380);
+            this.buttonAddPromenade.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.buttonAddPromenade.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAddPromenade.Location = new System.Drawing.Point(706, 470);
             this.buttonAddPromenade.Name = "buttonAddPromenade";
-            this.buttonAddPromenade.Size = new System.Drawing.Size(219, 37);
+            this.buttonAddPromenade.Size = new System.Drawing.Size(372, 46);
             this.buttonAddPromenade.TabIndex = 3;
             this.buttonAddPromenade.Text = "Réserver une promenade";
             this.buttonAddPromenade.UseVisualStyleBackColor = true;
@@ -127,11 +129,12 @@
             // 
             this.dataGridViewPromenades.AllowUserToAddRows = false;
             this.dataGridViewPromenades.AllowUserToDeleteRows = false;
+            this.dataGridViewPromenades.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.dataGridViewPromenades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewPromenades.Location = new System.Drawing.Point(507, 103);
+            this.dataGridViewPromenades.Location = new System.Drawing.Point(771, 119);
             this.dataGridViewPromenades.Name = "dataGridViewPromenades";
             this.dataGridViewPromenades.ReadOnly = true;
-            this.dataGridViewPromenades.Size = new System.Drawing.Size(243, 246);
+            this.dataGridViewPromenades.Size = new System.Drawing.Size(243, 322);
             this.dataGridViewPromenades.TabIndex = 4;
             // 
             // bindingSourcePromenades
@@ -167,7 +170,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MintCream;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1136, 564);
             this.Controls.Add(this.dataGridViewPromenades);
             this.Controls.Add(this.buttonAddPromenade);
             this.Controls.Add(this.dataGridViewDogs);
@@ -176,6 +179,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormMainUser";
             this.Text = "Promène mon chien";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormMainUser_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDogs)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDog)).EndInit();

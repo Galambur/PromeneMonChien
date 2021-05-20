@@ -62,30 +62,32 @@
             // createUserTitle
             // 
             this.createUserTitle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.createUserTitle.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.createUserTitle.Font = new System.Drawing.Font("Calibri", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.createUserTitle.Location = new System.Drawing.Point(0, 0);
             this.createUserTitle.Name = "createUserTitle";
-            this.createUserTitle.Size = new System.Drawing.Size(800, 100);
+            this.createUserTitle.Size = new System.Drawing.Size(1120, 111);
             this.createUserTitle.TabIndex = 1;
             this.createUserTitle.Text = "Créer un compte utilisateur";
             this.createUserTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // nameLabel
             // 
+            this.nameLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.nameLabel.AutoSize = true;
-            this.nameLabel.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameLabel.Location = new System.Drawing.Point(316, 109);
+            this.nameLabel.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameLabel.Location = new System.Drawing.Point(411, 142);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(47, 23);
+            this.nameLabel.Size = new System.Drawing.Size(81, 39);
             this.nameLabel.TabIndex = 2;
             this.nameLabel.Text = "Nom";
             // 
             // nameBox
             // 
-            this.nameBox.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameBox.Location = new System.Drawing.Point(389, 106);
+            this.nameBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.nameBox.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameBox.Location = new System.Drawing.Point(519, 139);
             this.nameBox.Name = "nameBox";
-            this.nameBox.Size = new System.Drawing.Size(146, 31);
+            this.nameBox.Size = new System.Drawing.Size(249, 47);
             this.nameBox.TabIndex = 1;
             // 
             // bindingSourceUser
@@ -109,108 +111,119 @@
             // 
             // phoneBox
             // 
-            this.phoneBox.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.phoneBox.Location = new System.Drawing.Point(389, 288);
+            this.phoneBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.phoneBox.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.phoneBox.Location = new System.Drawing.Point(519, 396);
             this.phoneBox.Name = "phoneBox";
-            this.phoneBox.Size = new System.Drawing.Size(146, 31);
+            this.phoneBox.Size = new System.Drawing.Size(249, 47);
             this.phoneBox.TabIndex = 5;
             // 
             // telephoneLabel
             // 
+            this.telephoneLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.telephoneLabel.AutoSize = true;
-            this.telephoneLabel.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.telephoneLabel.Location = new System.Drawing.Point(275, 291);
+            this.telephoneLabel.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.telephoneLabel.Location = new System.Drawing.Point(339, 399);
             this.telephoneLabel.Name = "telephoneLabel";
-            this.telephoneLabel.Size = new System.Drawing.Size(88, 23);
+            this.telephoneLabel.Size = new System.Drawing.Size(153, 39);
             this.telephoneLabel.TabIndex = 4;
             this.telephoneLabel.Text = "Telephone";
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(321, 239);
+            this.label2.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(420, 335);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 23);
+            this.label2.Size = new System.Drawing.Size(72, 39);
             this.label2.TabIndex = 6;
             this.label2.Text = "Ville";
             // 
             // firstNameBox
             // 
-            this.firstNameBox.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.firstNameBox.Location = new System.Drawing.Point(389, 149);
+            this.firstNameBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.firstNameBox.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.firstNameBox.Location = new System.Drawing.Point(519, 206);
             this.firstNameBox.Name = "firstNameBox";
-            this.firstNameBox.Size = new System.Drawing.Size(146, 31);
+            this.firstNameBox.Size = new System.Drawing.Size(249, 47);
             this.firstNameBox.TabIndex = 2;
             // 
             // firstNameLabel
             // 
+            this.firstNameLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.firstNameLabel.AutoSize = true;
-            this.firstNameLabel.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.firstNameLabel.Location = new System.Drawing.Point(292, 152);
+            this.firstNameLabel.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.firstNameLabel.Location = new System.Drawing.Point(371, 209);
             this.firstNameLabel.Name = "firstNameLabel";
-            this.firstNameLabel.Size = new System.Drawing.Size(71, 23);
+            this.firstNameLabel.Size = new System.Drawing.Size(121, 39);
             this.firstNameLabel.TabIndex = 8;
             this.firstNameLabel.Text = "Prenom";
             // 
             // emailBox
             // 
-            this.emailBox.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emailBox.Location = new System.Drawing.Point(389, 336);
+            this.emailBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.emailBox.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emailBox.Location = new System.Drawing.Point(519, 470);
             this.emailBox.Name = "emailBox";
-            this.emailBox.Size = new System.Drawing.Size(146, 31);
+            this.emailBox.Size = new System.Drawing.Size(249, 47);
             this.emailBox.TabIndex = 6;
             // 
             // emailLabel
             // 
+            this.emailLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.emailLabel.AutoSize = true;
-            this.emailLabel.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emailLabel.Location = new System.Drawing.Point(312, 339);
+            this.emailLabel.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emailLabel.Location = new System.Drawing.Point(404, 473);
             this.emailLabel.Name = "emailLabel";
-            this.emailLabel.Size = new System.Drawing.Size(51, 23);
+            this.emailLabel.Size = new System.Drawing.Size(88, 39);
             this.emailLabel.TabIndex = 12;
             this.emailLabel.Text = "Email";
             // 
             // passwordBox
             // 
-            this.passwordBox.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordBox.Location = new System.Drawing.Point(389, 384);
+            this.passwordBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.passwordBox.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwordBox.Location = new System.Drawing.Point(519, 541);
             this.passwordBox.Name = "passwordBox";
             this.passwordBox.PasswordChar = '*';
-            this.passwordBox.Size = new System.Drawing.Size(146, 31);
+            this.passwordBox.Size = new System.Drawing.Size(249, 47);
             this.passwordBox.TabIndex = 7;
             // 
             // passwordLabel
             // 
+            this.passwordLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.passwordLabel.AutoSize = true;
-            this.passwordLabel.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordLabel.Location = new System.Drawing.Point(250, 387);
+            this.passwordLabel.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwordLabel.Location = new System.Drawing.Point(299, 544);
             this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(113, 23);
+            this.passwordLabel.Size = new System.Drawing.Size(193, 39);
             this.passwordLabel.TabIndex = 14;
             this.passwordLabel.Text = "Mot de passe";
             // 
             // checkBoxProprietaire
             // 
+            this.checkBoxProprietaire.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBoxProprietaire.AutoSize = true;
-            this.checkBoxProprietaire.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxProprietaire.Location = new System.Drawing.Point(402, 197);
+            this.checkBoxProprietaire.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxProprietaire.Location = new System.Drawing.Point(547, 281);
             this.checkBoxProprietaire.Name = "checkBoxProprietaire";
-            this.checkBoxProprietaire.Size = new System.Drawing.Size(121, 27);
+            this.checkBoxProprietaire.Size = new System.Drawing.Size(191, 43);
             this.checkBoxProprietaire.TabIndex = 3;
             this.checkBoxProprietaire.Text = "Propriétaire";
             this.checkBoxProprietaire.UseVisualStyleBackColor = true;
             // 
             // comboBox1
             // 
+            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.bindingSourceUser, "idVille", true));
             this.comboBox1.DataSource = this.villeBindingSource;
             this.comboBox1.DisplayMember = "nomVille";
-            this.comboBox1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(389, 236);
+            this.comboBox1.Location = new System.Drawing.Point(519, 332);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(146, 31);
+            this.comboBox1.Size = new System.Drawing.Size(249, 47);
             this.comboBox1.TabIndex = 4;
             this.comboBox1.ValueMember = "idVille";
             // 
@@ -229,10 +242,11 @@
             // 
             // validateButton
             // 
-            this.validateButton.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.validateButton.Location = new System.Drawing.Point(696, 405);
+            this.validateButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.validateButton.Font = new System.Drawing.Font("Arial Narrow", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.validateButton.Location = new System.Drawing.Point(998, 547);
             this.validateButton.Name = "validateButton";
-            this.validateButton.Size = new System.Drawing.Size(92, 33);
+            this.validateButton.Size = new System.Drawing.Size(110, 41);
             this.validateButton.TabIndex = 17;
             this.validateButton.Text = "Valider";
             this.validateButton.UseVisualStyleBackColor = true;
@@ -243,7 +257,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MintCream;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1120, 600);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.validateButton);
             this.Controls.Add(this.checkBoxProprietaire);
@@ -262,6 +276,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "UserCreate";
             this.Text = "Promène mon chien";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.CreateUser_Load);
             this.Click += new System.EventHandler(this.validateButton_clicked);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceUser)).EndInit();

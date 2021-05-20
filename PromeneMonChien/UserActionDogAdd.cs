@@ -31,6 +31,9 @@ namespace PromeneMonChien
                     com.ExecuteNonQuery();
                 }
             }
+            FormMainUser f = new FormMainUser(this.userId);
+            this.Hide();
+            f.ShowDialog();
             this.Close();
 
         }

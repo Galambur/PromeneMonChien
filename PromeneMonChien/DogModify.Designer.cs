@@ -56,24 +56,25 @@
             // modifyDogTitle
             // 
             this.modifyDogTitle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.modifyDogTitle.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.modifyDogTitle.Font = new System.Drawing.Font("Calibri", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.modifyDogTitle.Location = new System.Drawing.Point(0, 0);
             this.modifyDogTitle.Name = "modifyDogTitle";
-            this.modifyDogTitle.Size = new System.Drawing.Size(800, 100);
+            this.modifyDogTitle.Size = new System.Drawing.Size(1071, 100);
             this.modifyDogTitle.TabIndex = 17;
             this.modifyDogTitle.Text = "Modifier les informations d\'un chien";
             this.modifyDogTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // comboBoxDog
             // 
+            this.comboBoxDog.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBoxDog.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.bindingSourceDog, "nomChien", true));
             this.comboBoxDog.DataSource = this.bindingSourceDog;
             this.comboBoxDog.DisplayMember = "nomChien";
-            this.comboBoxDog.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxDog.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxDog.FormattingEnabled = true;
-            this.comboBoxDog.Location = new System.Drawing.Point(384, 158);
+            this.comboBoxDog.Location = new System.Drawing.Point(467, 127);
             this.comboBoxDog.Name = "comboBoxDog";
-            this.comboBoxDog.Size = new System.Drawing.Size(146, 31);
+            this.comboBoxDog.Size = new System.Drawing.Size(249, 47);
             this.comboBoxDog.TabIndex = 27;
             this.comboBoxDog.ValueMember = "idChien";
             // 
@@ -89,14 +90,15 @@
             // 
             // comboBoxType
             // 
+            this.comboBoxType.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBoxType.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.bindingSourceDog, "idType", true));
             this.comboBoxType.DataSource = this.bindingSourceType;
             this.comboBoxType.DisplayMember = "nomType";
-            this.comboBoxType.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxType.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxType.FormattingEnabled = true;
-            this.comboBoxType.Location = new System.Drawing.Point(384, 201);
+            this.comboBoxType.Location = new System.Drawing.Point(467, 201);
             this.comboBoxType.Name = "comboBoxType";
-            this.comboBoxType.Size = new System.Drawing.Size(146, 31);
+            this.comboBoxType.Size = new System.Drawing.Size(249, 47);
             this.comboBoxType.TabIndex = 30;
             this.comboBoxType.ValueMember = "idType";
             // 
@@ -107,31 +109,34 @@
             // 
             // typeLabel
             // 
+            this.typeLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.typeLabel.AutoSize = true;
-            this.typeLabel.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.typeLabel.Location = new System.Drawing.Point(309, 204);
+            this.typeLabel.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.typeLabel.Location = new System.Drawing.Point(346, 204);
             this.typeLabel.Name = "typeLabel";
-            this.typeLabel.Size = new System.Drawing.Size(46, 23);
+            this.typeLabel.Size = new System.Drawing.Size(79, 39);
             this.typeLabel.TabIndex = 35;
             this.typeLabel.Text = "Type";
             // 
             // proprietaireLabel
             // 
+            this.proprietaireLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.proprietaireLabel.AutoSize = true;
-            this.proprietaireLabel.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.proprietaireLabel.Location = new System.Drawing.Point(253, 246);
+            this.proprietaireLabel.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.proprietaireLabel.Location = new System.Drawing.Point(253, 284);
             this.proprietaireLabel.Name = "proprietaireLabel";
-            this.proprietaireLabel.Size = new System.Drawing.Size(102, 23);
+            this.proprietaireLabel.Size = new System.Drawing.Size(172, 39);
             this.proprietaireLabel.TabIndex = 33;
             this.proprietaireLabel.Text = "Propriétaire";
             // 
             // nameLabel
             // 
+            this.nameLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.nameLabel.AutoSize = true;
-            this.nameLabel.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameLabel.Location = new System.Drawing.Point(308, 161);
+            this.nameLabel.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameLabel.Location = new System.Drawing.Point(344, 130);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(47, 23);
+            this.nameLabel.Size = new System.Drawing.Size(81, 39);
             this.nameLabel.TabIndex = 32;
             this.nameLabel.Text = "Nom";
             // 
@@ -145,14 +150,15 @@
             // 
             // comboBoxProprietaire
             // 
+            this.comboBoxProprietaire.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBoxProprietaire.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.bindingSourceDog, "idUtilisateur", true));
             this.comboBoxProprietaire.DataSource = this.bindingSourceProprietaire;
             this.comboBoxProprietaire.DisplayMember = "nomUtilisateur";
-            this.comboBoxProprietaire.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxProprietaire.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxProprietaire.FormattingEnabled = true;
-            this.comboBoxProprietaire.Location = new System.Drawing.Point(384, 243);
+            this.comboBoxProprietaire.Location = new System.Drawing.Point(467, 281);
             this.comboBoxProprietaire.Name = "comboBoxProprietaire";
-            this.comboBoxProprietaire.Size = new System.Drawing.Size(146, 31);
+            this.comboBoxProprietaire.Size = new System.Drawing.Size(249, 47);
             this.comboBoxProprietaire.TabIndex = 36;
             this.comboBoxProprietaire.ValueMember = "idUtilisateur";
             // 
@@ -163,22 +169,24 @@
             // 
             // description
             // 
+            this.description.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.description.AutoSize = true;
-            this.description.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.description.Location = new System.Drawing.Point(253, 291);
+            this.description.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.description.Location = new System.Drawing.Point(258, 369);
             this.description.Name = "description";
-            this.description.Size = new System.Drawing.Size(99, 23);
+            this.description.Size = new System.Drawing.Size(167, 39);
             this.description.TabIndex = 37;
             this.description.Text = "Description";
             // 
             // descriptionBox
             // 
+            this.descriptionBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.descriptionBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSourceDog, "description", true));
-            this.descriptionBox.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.descriptionBox.Location = new System.Drawing.Point(384, 288);
+            this.descriptionBox.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.descriptionBox.Location = new System.Drawing.Point(467, 366);
             this.descriptionBox.Multiline = true;
             this.descriptionBox.Name = "descriptionBox";
-            this.descriptionBox.Size = new System.Drawing.Size(233, 85);
+            this.descriptionBox.Size = new System.Drawing.Size(307, 103);
             this.descriptionBox.TabIndex = 38;
             // 
             // utilisateurTableAdapter
@@ -187,10 +195,11 @@
             // 
             // validateButton
             // 
-            this.validateButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.validateButton.Location = new System.Drawing.Point(720, 404);
+            this.validateButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.validateButton.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.validateButton.Location = new System.Drawing.Point(947, 507);
             this.validateButton.Name = "validateButton";
-            this.validateButton.Size = new System.Drawing.Size(68, 34);
+            this.validateButton.Size = new System.Drawing.Size(112, 52);
             this.validateButton.TabIndex = 39;
             this.validateButton.Text = "Valider";
             this.validateButton.UseVisualStyleBackColor = true;
@@ -201,7 +210,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MintCream;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1071, 571);
             this.Controls.Add(this.validateButton);
             this.Controls.Add(this.descriptionBox);
             this.Controls.Add(this.description);
@@ -215,6 +224,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DogModify";
             this.Text = "Promène mon chien";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.DogModify_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDog)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.promenemonchienDataSet)).EndInit();
