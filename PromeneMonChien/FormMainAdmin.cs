@@ -46,6 +46,12 @@ namespace PromeneMonChien
         #endregion
 
         #region dog CRUD
+        private void showDogsButton_Click(object sender, EventArgs e)
+        {
+            DogsShow f = new DogsShow();
+            f.ShowDialog();
+        }
+
         private void addDogButton_Click(object sender, EventArgs e)
         {
             DogAdd f = new DogAdd();

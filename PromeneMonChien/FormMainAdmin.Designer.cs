@@ -144,6 +144,7 @@
             this.showDogsButton.TabIndex = 5;
             this.showDogsButton.Text = "Afficher";
             this.showDogsButton.UseVisualStyleBackColor = true;
+            this.showDogsButton.Click += new System.EventHandler(this.showDogsButton_Click);
             // 
             // addDogButton
             // 
