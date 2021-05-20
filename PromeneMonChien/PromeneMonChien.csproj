@@ -133,6 +133,12 @@
     <Compile Include="UserModify.Designer.cs">
       <DependentUpon>UserModify.cs</DependentUpon>
     </Compile>
+    <Compile Include="DogsShow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DogsShow.Designer.cs">
+      <DependentUpon>DogsShow.cs</DependentUpon>
+    </Compile>
     <Compile Include="UsersShow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,6 +202,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DogsShow.resx">
+      <DependentUpon>DogsShow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UsersShow.resx">
       <DependentUpon>UsersShow.cs</DependentUpon>
     </EmbeddedResource>

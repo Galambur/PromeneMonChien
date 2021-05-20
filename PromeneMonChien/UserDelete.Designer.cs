@@ -228,7 +228,7 @@
             // 
             // validateButton
             // 
-            this.validateButton.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.validateButton.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.validateButton.Location = new System.Drawing.Point(687, 405);
             this.validateButton.Name = "validateButton";
             this.validateButton.Size = new System.Drawing.Size(101, 33);

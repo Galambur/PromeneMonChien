@@ -51,7 +51,6 @@ namespace PromeneMonChien
             DogAdd f = new DogAdd();
             f.ShowDialog();
         }
-        #endregion
 
         private void modifyDogButton_Click(object sender, EventArgs e)
         {
@@ -64,6 +63,7 @@ namespace PromeneMonChien
             DogDelete f = new DogDelete();
             f.ShowDialog();
         }
+        #endregion
 
         private void addPromenadeButton_Click(object sender, EventArgs e)
         {
