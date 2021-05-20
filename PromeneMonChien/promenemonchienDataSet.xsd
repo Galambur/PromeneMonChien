@@ -124,7 +124,17 @@
               <Mapping SourceColumn="idUtilisateur" DataSetColumn="idUtilisateur" />
               <Mapping SourceColumn="idChien" DataSetColumn="idChien" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="promenemonchienConnectionString (Settings)" DbObjectName="promenemonchien.promenade" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillPromenadesBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillPromenadesBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillPromenadesBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `idPromenade`, `datePromenade`, `idUtilisateur`, `idChien` FROM `promenade`
+ORDER BY `datePromenade` DESC</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="typeTableAdapter" GeneratorDataComponentClassName="typeTableAdapter" Name="type" UserDataComponentName="typeTableAdapter">
             <MainSource>
@@ -309,7 +319,7 @@
   <xs:element name="promenemonchienDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="promenemonchienDataSet" msprop:Generator_UserDSName="promenemonchienDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="chien" msprop:Generator_TableClassName="chienDataTable" msprop:Generator_TableVarName="tablechien" msprop:Generator_TablePropName="chien" msprop:Generator_RowDeletingName="chienRowDeleting" msprop:Generator_RowChangingName="chienRowChanging" msprop:Generator_RowEvHandlerName="chienRowChangeEventHandler" msprop:Generator_RowDeletedName="chienRowDeleted" msprop:Generator_UserTableName="chien" msprop:Generator_RowChangedName="chienRowChanged" msprop:Generator_RowEvArgName="chienRowChangeEvent" msprop:Generator_RowClassName="chienRow">
+        <xs:element name="chien" msprop:Generator_TableClassName="chienDataTable" msprop:Generator_TableVarName="tablechien" msprop:Generator_RowChangedName="chienRowChanged" msprop:Generator_TablePropName="chien" msprop:Generator_RowDeletingName="chienRowDeleting" msprop:Generator_RowChangingName="chienRowChanging" msprop:Generator_RowEvHandlerName="chienRowChangeEventHandler" msprop:Generator_RowDeletedName="chienRowDeleted" msprop:Generator_RowClassName="chienRow" msprop:Generator_UserTableName="chien" msprop:Generator_RowEvArgName="chienRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idChien" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidChien" msprop:Generator_ColumnPropNameInRow="idChien" msprop:Generator_ColumnPropNameInTable="idChienColumn" msprop:Generator_UserColumnName="idChien" type="xs:int" />
@@ -332,7 +342,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="promenade" msprop:Generator_TableClassName="promenadeDataTable" msprop:Generator_TableVarName="tablepromenade" msprop:Generator_TablePropName="promenade" msprop:Generator_RowDeletingName="promenadeRowDeleting" msprop:Generator_RowChangingName="promenadeRowChanging" msprop:Generator_RowEvHandlerName="promenadeRowChangeEventHandler" msprop:Generator_RowDeletedName="promenadeRowDeleted" msprop:Generator_UserTableName="promenade" msprop:Generator_RowChangedName="promenadeRowChanged" msprop:Generator_RowEvArgName="promenadeRowChangeEvent" msprop:Generator_RowClassName="promenadeRow">
+        <xs:element name="promenade" msprop:Generator_TableClassName="promenadeDataTable" msprop:Generator_TableVarName="tablepromenade" msprop:Generator_RowChangedName="promenadeRowChanged" msprop:Generator_TablePropName="promenade" msprop:Generator_RowDeletingName="promenadeRowDeleting" msprop:Generator_RowChangingName="promenadeRowChanging" msprop:Generator_RowEvHandlerName="promenadeRowChangeEventHandler" msprop:Generator_RowDeletedName="promenadeRowDeleted" msprop:Generator_RowClassName="promenadeRow" msprop:Generator_UserTableName="promenade" msprop:Generator_RowEvArgName="promenadeRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idPromenade" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidPromenade" msprop:Generator_ColumnPropNameInRow="idPromenade" msprop:Generator_ColumnPropNameInTable="idPromenadeColumn" msprop:Generator_UserColumnName="idPromenade" type="xs:int" />
@@ -342,7 +352,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="type" msprop:Generator_TableClassName="typeDataTable" msprop:Generator_TableVarName="tabletype" msprop:Generator_TablePropName="type" msprop:Generator_RowDeletingName="typeRowDeleting" msprop:Generator_RowChangingName="typeRowChanging" msprop:Generator_RowEvHandlerName="typeRowChangeEventHandler" msprop:Generator_RowDeletedName="typeRowDeleted" msprop:Generator_UserTableName="type" msprop:Generator_RowChangedName="typeRowChanged" msprop:Generator_RowEvArgName="typeRowChangeEvent" msprop:Generator_RowClassName="typeRow">
+        <xs:element name="type" msprop:Generator_TableClassName="typeDataTable" msprop:Generator_TableVarName="tabletype" msprop:Generator_RowChangedName="typeRowChanged" msprop:Generator_TablePropName="type" msprop:Generator_RowDeletingName="typeRowDeleting" msprop:Generator_RowChangingName="typeRowChanging" msprop:Generator_RowEvHandlerName="typeRowChangeEventHandler" msprop:Generator_RowDeletedName="typeRowDeleted" msprop:Generator_RowClassName="typeRow" msprop:Generator_UserTableName="type" msprop:Generator_RowEvArgName="typeRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idType" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidType" msprop:Generator_ColumnPropNameInRow="idType" msprop:Generator_ColumnPropNameInTable="idTypeColumn" msprop:Generator_UserColumnName="idType" type="xs:int" />
@@ -356,7 +366,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="utilisateur" msprop:Generator_TableClassName="utilisateurDataTable" msprop:Generator_TableVarName="tableutilisateur" msprop:Generator_TablePropName="utilisateur" msprop:Generator_RowDeletingName="utilisateurRowDeleting" msprop:Generator_RowChangingName="utilisateurRowChanging" msprop:Generator_RowEvHandlerName="utilisateurRowChangeEventHandler" msprop:Generator_RowDeletedName="utilisateurRowDeleted" msprop:Generator_UserTableName="utilisateur" msprop:Generator_RowChangedName="utilisateurRowChanged" msprop:Generator_RowEvArgName="utilisateurRowChangeEvent" msprop:Generator_RowClassName="utilisateurRow">
+        <xs:element name="utilisateur" msprop:Generator_TableClassName="utilisateurDataTable" msprop:Generator_TableVarName="tableutilisateur" msprop:Generator_RowChangedName="utilisateurRowChanged" msprop:Generator_TablePropName="utilisateur" msprop:Generator_RowDeletingName="utilisateurRowDeleting" msprop:Generator_RowChangingName="utilisateurRowChanging" msprop:Generator_RowEvHandlerName="utilisateurRowChangeEventHandler" msprop:Generator_RowDeletedName="utilisateurRowDeleted" msprop:Generator_RowClassName="utilisateurRow" msprop:Generator_UserTableName="utilisateur" msprop:Generator_RowEvArgName="utilisateurRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idUtilisateur" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidUtilisateur" msprop:Generator_ColumnPropNameInRow="idUtilisateur" msprop:Generator_ColumnPropNameInTable="idUtilisateurColumn" msprop:Generator_UserColumnName="idUtilisateur" type="xs:int" />
@@ -400,7 +410,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ville" msprop:Generator_TableClassName="villeDataTable" msprop:Generator_TableVarName="tableville" msprop:Generator_TablePropName="ville" msprop:Generator_RowDeletingName="villeRowDeleting" msprop:Generator_RowChangingName="villeRowChanging" msprop:Generator_RowEvHandlerName="villeRowChangeEventHandler" msprop:Generator_RowDeletedName="villeRowDeleted" msprop:Generator_UserTableName="ville" msprop:Generator_RowChangedName="villeRowChanged" msprop:Generator_RowEvArgName="villeRowChangeEvent" msprop:Generator_RowClassName="villeRow">
+        <xs:element name="ville" msprop:Generator_TableClassName="villeDataTable" msprop:Generator_TableVarName="tableville" msprop:Generator_RowChangedName="villeRowChanged" msprop:Generator_TablePropName="ville" msprop:Generator_RowDeletingName="villeRowDeleting" msprop:Generator_RowChangingName="villeRowChanging" msprop:Generator_RowEvHandlerName="villeRowChangeEventHandler" msprop:Generator_RowDeletedName="villeRowDeleted" msprop:Generator_RowClassName="villeRow" msprop:Generator_UserTableName="ville" msprop:Generator_RowEvArgName="villeRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idVille" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidVille" msprop:Generator_ColumnPropNameInRow="idVille" msprop:Generator_ColumnPropNameInTable="idVilleColumn" msprop:Generator_UserColumnName="idVille" type="xs:int" />
@@ -446,11 +456,11 @@
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="chien_type_FK" msdata:parent="type" msdata:child="chien" msdata:parentkey="idType" msdata:childkey="idType" msprop:Generator_UserChildTable="chien" msprop:Generator_ChildPropName="GetchienRows" msprop:Generator_UserRelationName="chien_type_FK" msprop:Generator_RelationVarName="relationchien_type_FK" msprop:Generator_UserParentTable="type" msprop:Generator_ParentPropName="typeRow" />
-      <msdata:Relationship name="chien_utilisateur0_FK" msdata:parent="utilisateur" msdata:child="chien" msdata:parentkey="idUtilisateur" msdata:childkey="idUtilisateur" msprop:Generator_UserChildTable="chien" msprop:Generator_ChildPropName="GetchienRows" msprop:Generator_UserRelationName="chien_utilisateur0_FK" msprop:Generator_RelationVarName="relationchien_utilisateur0_FK" msprop:Generator_UserParentTable="utilisateur" msprop:Generator_ParentPropName="utilisateurRow" />
-      <msdata:Relationship name="promenade_chien0_FK" msdata:parent="chien" msdata:child="promenade" msdata:parentkey="idChien" msdata:childkey="idChien" msprop:Generator_UserChildTable="promenade" msprop:Generator_ChildPropName="GetpromenadeRows" msprop:Generator_UserRelationName="promenade_chien0_FK" msprop:Generator_ParentPropName="chienRow" msprop:Generator_RelationVarName="relationpromenade_chien0_FK" msprop:Generator_UserParentTable="chien" />
-      <msdata:Relationship name="promenade_utilisateur_FK" msdata:parent="utilisateur" msdata:child="promenade" msdata:parentkey="idUtilisateur" msdata:childkey="idUtilisateur" msprop:Generator_UserChildTable="promenade" msprop:Generator_ChildPropName="GetpromenadeRows" msprop:Generator_UserRelationName="promenade_utilisateur_FK" msprop:Generator_RelationVarName="relationpromenade_utilisateur_FK" msprop:Generator_UserParentTable="utilisateur" msprop:Generator_ParentPropName="utilisateurRow" />
-      <msdata:Relationship name="utilisateur_ville_FK" msdata:parent="ville" msdata:child="utilisateur" msdata:parentkey="idVille" msdata:childkey="idVille" msprop:Generator_UserChildTable="utilisateur" msprop:Generator_ChildPropName="GetutilisateurRows" msprop:Generator_UserRelationName="utilisateur_ville_FK" msprop:Generator_RelationVarName="relationutilisateur_ville_FK" msprop:Generator_UserParentTable="ville" msprop:Generator_ParentPropName="villeRow" />
+      <msdata:Relationship name="chien_type_FK" msdata:parent="type" msdata:child="chien" msdata:parentkey="idType" msdata:childkey="idType" msprop:Generator_UserChildTable="chien" msprop:Generator_ChildPropName="GetchienRows" msprop:Generator_UserRelationName="chien_type_FK" msprop:Generator_ParentPropName="typeRow" msprop:Generator_RelationVarName="relationchien_type_FK" msprop:Generator_UserParentTable="type" />
+      <msdata:Relationship name="chien_utilisateur0_FK" msdata:parent="utilisateur" msdata:child="chien" msdata:parentkey="idUtilisateur" msdata:childkey="idUtilisateur" msprop:Generator_UserChildTable="chien" msprop:Generator_ChildPropName="GetchienRows" msprop:Generator_UserRelationName="chien_utilisateur0_FK" msprop:Generator_ParentPropName="utilisateurRow" msprop:Generator_RelationVarName="relationchien_utilisateur0_FK" msprop:Generator_UserParentTable="utilisateur" />
+      <msdata:Relationship name="promenade_chien0_FK" msdata:parent="chien" msdata:child="promenade" msdata:parentkey="idChien" msdata:childkey="idChien" msprop:Generator_UserChildTable="promenade" msprop:Generator_ChildPropName="GetpromenadeRows" msprop:Generator_UserRelationName="promenade_chien0_FK" msprop:Generator_RelationVarName="relationpromenade_chien0_FK" msprop:Generator_UserParentTable="chien" msprop:Generator_ParentPropName="chienRow" />
+      <msdata:Relationship name="promenade_utilisateur_FK" msdata:parent="utilisateur" msdata:child="promenade" msdata:parentkey="idUtilisateur" msdata:childkey="idUtilisateur" msprop:Generator_UserChildTable="promenade" msprop:Generator_ChildPropName="GetpromenadeRows" msprop:Generator_UserRelationName="promenade_utilisateur_FK" msprop:Generator_ParentPropName="utilisateurRow" msprop:Generator_RelationVarName="relationpromenade_utilisateur_FK" msprop:Generator_UserParentTable="utilisateur" />
+      <msdata:Relationship name="utilisateur_ville_FK" msdata:parent="ville" msdata:child="utilisateur" msdata:parentkey="idVille" msdata:childkey="idVille" msprop:Generator_UserChildTable="utilisateur" msprop:Generator_ChildPropName="GetutilisateurRows" msprop:Generator_UserRelationName="utilisateur_ville_FK" msprop:Generator_ParentPropName="villeRow" msprop:Generator_RelationVarName="relationutilisateur_ville_FK" msprop:Generator_UserParentTable="ville" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

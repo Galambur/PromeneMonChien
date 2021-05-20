@@ -121,6 +121,18 @@
     <Compile Include="PromenadeShow.Designer.cs">
       <DependentUpon>PromenadeShow.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserActionDogAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserActionDogAdd.Designer.cs">
+      <DependentUpon>UserActionDogAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserActionPromenadeAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserActionPromenadeAdd.Designer.cs">
+      <DependentUpon>UserActionPromenadeAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserCreate.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -207,6 +219,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PromenadeShow.resx">
       <DependentUpon>PromenadeShow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserActionDogAdd.resx">
+      <DependentUpon>UserActionDogAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserActionPromenadeAdd.resx">
+      <DependentUpon>UserActionPromenadeAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserCreate.resx">
       <DependentUpon>UserCreate.cs</DependentUpon>
