@@ -188,6 +188,7 @@
             this.showPromenadesButton.TabIndex = 9;
             this.showPromenadesButton.Text = "Afficher";
             this.showPromenadesButton.UseVisualStyleBackColor = true;
+            this.showPromenadesButton.Click += new System.EventHandler(this.showPromenadesButton_Click);
             // 
             // addPromenadeButton
             // 
@@ -209,6 +210,7 @@
             this.modifyPromenadeButton.TabIndex = 11;
             this.modifyPromenadeButton.Text = "Modifier";
             this.modifyPromenadeButton.UseVisualStyleBackColor = true;
+            this.modifyPromenadeButton.Click += new System.EventHandler(this.modifyPromenadeButton_Click);
             // 
             // deletePromenadeButton
             // 
@@ -219,6 +221,7 @@
             this.deletePromenadeButton.TabIndex = 12;
             this.deletePromenadeButton.Text = "Supprimer";
             this.deletePromenadeButton.UseVisualStyleBackColor = true;
+            this.deletePromenadeButton.Click += new System.EventHandler(this.deletePromenadeButton_Click);
             // 
             // FormMainAdmin
             // 

@@ -71,9 +71,29 @@ namespace PromeneMonChien
         }
         #endregion
 
+        #region promenades CRUD
         private void addPromenadeButton_Click(object sender, EventArgs e)
         {
             PromenadeCreate f = new PromenadeCreate();
+            f.ShowDialog();
+        }
+
+        private void showPromenadesButton_Click(object sender, EventArgs e)
+        {
+            PromenadeShow f = new PromenadeShow();
+            f.ShowDialog();
+        }
+        #endregion
+
+        private void modifyPromenadeButton_Click(object sender, EventArgs e)
+        {
+            PromenadeModify f = new PromenadeModify();
+            f.ShowDialog();
+        }
+
+        private void deletePromenadeButton_Click(object sender, EventArgs e)
+        {
+            PromenadeDelete f = new PromenadeDelete();
             f.ShowDialog();
         }
     }
