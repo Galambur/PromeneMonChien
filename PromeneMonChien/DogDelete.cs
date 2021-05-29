@@ -16,22 +16,24 @@ namespace PromeneMonChien
 
         public DogDelete()
         {
+            // initialisation de la fenêtre
             InitializeComponent();
         }
 
         private void DogDelete_Load(object sender, EventArgs e)
         {
-            // TODO: cette ligne de code charge les données dans la table 'promenemonchienDataSet.chien'. Vous pouvez la déplacer ou la supprimer selon les besoins.
+            // on rempli des informations de la table chien
             this.chienTableAdapter.Fill(this.promenemonchienDataSet.chien);
-
         }
 
         private void validateButton_Click(object sender, EventArgs e)
         {
+            // crée l'objet de connexion
             using (MySqlConnection con = new MySqlConnection(myConn))
             {
                 // ouverture de la connexion à notre base de données
                 con.Open();
+                // crée l'objet requête SQL
                 using (MySqlCommand com = new MySqlCommand(DeleteQuery, con))
                 {
                     // on récupère les données du formulaire en les liant aux paramètre de notre 

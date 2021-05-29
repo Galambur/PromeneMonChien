@@ -78,7 +78,6 @@
             // 
             this.bindingSourceUser.DataMember = "utilisateur";
             this.bindingSourceUser.DataSource = this.promenemonchienDataSet;
-            this.bindingSourceUser.CurrentChanged += new System.EventHandler(this.bindingSource1_CurrentChanged);
             // 
             // promenemonchienDataSet
             // 

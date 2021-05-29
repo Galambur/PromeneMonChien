@@ -7,10 +7,12 @@ namespace PromeneMonChien
 {
     public partial class UserActionDogAdd : Form
     {
-        int userId;
         private static string myConn = ConfigurationManager.ConnectionStrings["PromeneMonChien.Properties.Settings.promenemonchienConnectionString"].ConnectionString;
-        private const string InsertQuery = "INSERT INTO chien(nomChien, idType, idUtilisateur, description) Values (@nomChien, @idType, @idUtilisateur, @description)";
+        // requête pour ajouter un chien dans la base de données
+        private const string InsertQuery = "INSERT INTO chien(nomChien, idType, idUtilisateur, description) " +
+            "Values (@nomChien, @idType, @idUtilisateur, @description)";
 
+        int userId;
         public UserActionDogAdd(int userId)
         {
             InitializeComponent();
@@ -21,9 +23,12 @@ namespace PromeneMonChien
         {
             using (MySqlConnection con = new MySqlConnection(myConn))
             {
+                // ouverture de la connexion à notre base de données
                 con.Open();
                 using (MySqlCommand com = new MySqlCommand(InsertQuery, con))
                 {
+                    // récupération des données du formulaire
+                    // on les lie aux paramètres de la requête SQL
                     com.Parameters.AddWithValue("@nomChien", textBoxDogName.Text);
                     com.Parameters.AddWithValue("@idType", comboBoxDogType.SelectedValue);
                     com.Parameters.AddWithValue("@idUtilisateur", this.userId);
@@ -31,6 +36,7 @@ namespace PromeneMonChien
                     com.ExecuteNonQuery();
                 }
             }
+            // on revient à la page d'accueil après l'ajout du chien
             FormMainUser f = new FormMainUser(this.userId);
             this.Hide();
             f.ShowDialog();

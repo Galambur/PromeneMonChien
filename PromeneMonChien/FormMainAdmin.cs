@@ -83,7 +83,6 @@ namespace PromeneMonChien
             PromenadeShow f = new PromenadeShow();
             f.ShowDialog();
         }
-        #endregion
 
         private void modifyPromenadeButton_Click(object sender, EventArgs e)
         {
@@ -96,5 +95,6 @@ namespace PromeneMonChien
             PromenadeDelete f = new PromenadeDelete();
             f.ShowDialog();
         }
+        #endregion
     }
 }

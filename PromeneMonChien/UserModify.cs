@@ -11,8 +11,8 @@ namespace PromeneMonChien
         private static string myConn = ConfigurationManager.ConnectionStrings["PromeneMonChien.Properties." +
             "Settings.promenemonchienConnectionString"].ConnectionString;
         // requête SQL pour modifier la ligne désirée
-        private const string UpdateQuery = "Update utilisateur set nomUtilisateur=@nomUtilisateur, " +
-            "prenomUtilisateur=@prenomUtilisateur, proprietaire=@proprietaire, idVille=@idVille, " +
+        private const string UpdateQuery = "Update utilisateur set prenomUtilisateur=@prenomUtilisateur," +
+            " proprietaire=@proprietaire, idVille=@idVille, " +
             "telephone=@telephone, email=@email, mdp=@mdp where idUtilisateur=@idUtilisateur";
         public UserModify()
         {
@@ -37,7 +37,6 @@ namespace PromeneMonChien
                     // récupération des données du formulaire, on les relie aux paramètre de
                     // notre requête SQL
                     com.Parameters.AddWithValue("@idUtilisateur", comboBoxUserName.SelectedValue);
-                    com.Parameters.AddWithValue("@nomUtilisateur", comboBoxUserName.Text);
                     com.Parameters.AddWithValue("@prenomUtilisateur", firstNameBox.Text);
                     com.Parameters.AddWithValue("@proprietaire", checkBoxProprietaire.Checked);
                     com.Parameters.AddWithValue("@idVille", comboBoxCity.SelectedValue);

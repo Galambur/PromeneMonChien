@@ -32,13 +32,23 @@ namespace PromeneMonChien
                 "FROM chien, type " +
                 "WHERE chien.idType = type.idType " +
                 "AND chien.idUtilisateur=" + this.userId.ToString();
+            // les promenades où je suis inscrit de la plus récente à la plus ancienne
             string SelectPromenadesQuery = "SELECT datePromenade as Date, nomChien as Chien " +
                 "FROM promenade, chien " +
                 "WHERE promenade.idChien = chien.idChien " +
-                "AND promenade.idUtilisateur=" + this.userId.ToString();
+                "AND promenade.idUtilisateur=" + this.userId.ToString() +
+                " ORDER BY Date DESC";
+            // les promenades où mes chiens sont inscrit, de la plus récente à la plus ancienne
+            string SelectDogPromenadesQuery = "SELECT c.nomChien as Chien, CONCAT(promeneur.nomUtilisateur, \" \", promeneur.prenomUtilisateur) as Promeneur, " +
+                "p.datePromenade as Date " +
+                "FROM promenade p, chien c, utilisateur as promeneur " +
+                "WHERE p.idChien = c.idChien " +
+                "AND p.idUtilisateur = promeneur.idUtilisateur " +
+                "AND c.idUtilisateur = " + this.userId.ToString() +
+                " ORDER BY Date DESC";
 
 
-                // jointure des tables cherchées
+            // jointure des tables cherchées
             // ouverture de la connexion
             var con = new MySqlConnection(myConn);
             con.Open();
@@ -50,12 +60,19 @@ namespace PromeneMonChien
             sdrDog.Fill(dtDog);
             dataGridViewDogs.DataSource = dtDog;
 
-            // promenades
+            // les promenades où je suis inscrit
             var comProm = new MySqlCommand(SelectPromenadesQuery, con);
             var sdrProm = new MySqlDataAdapter(comProm);
             var dtProm = new DataTable();
             sdrProm.Fill(dtProm);
             dataGridViewPromenades.DataSource = dtProm;
+
+            // les promenades où mes chiens sont inscrit
+            var comDogProm = new MySqlCommand(SelectDogPromenadesQuery, con);
+            var sdrDogProm = new MySqlDataAdapter(comDogProm);
+            var dtDogProm = new DataTable();
+            sdrDogProm.Fill(dtDogProm);
+            dataGridViewDogPromenade.DataSource = dtDogProm;
 
             // fermeture de la connexion
             con.Close();

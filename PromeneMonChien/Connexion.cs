@@ -43,9 +43,16 @@ namespace PromeneMonChien
                         f.ShowDialog();
                         this.Close();
                     }
+                    // result : le booléen qui indique si ce qui est entré en mot de passe / email
+                    // trouve un lien avec la base de données
+                    // true = l'email et le mot de passe existent dans la base de données
                     else if (result == true)
                     {
+                        // on crée un objet de type page d'accueil utilisateur
+                        // en envoyant l'identifiant de l'utilisateur trouvé pour le duo email / mot de passe
                         FormMainUser f = new FormMainUser(user.GetInt32("idUtilisateur"));
+                        // on ouvre la page d'accueil utilisateur
+                        // et on ferme la page de connexion
                         this.Hide();
                         f.ShowDialog();
                         this.Close();
