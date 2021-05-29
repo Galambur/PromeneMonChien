@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Configuration;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace PromeneMonChien
@@ -9,10 +10,12 @@ namespace PromeneMonChien
     {
         private static string myConn = ConfigurationManager.ConnectionStrings["PromeneMonChien.Properties.Settings.promenemonchienConnectionString"].ConnectionString;
         // requête pour ajouter un chien dans la base de données
-        private const string InsertQuery = "INSERT INTO chien(nomChien, idType, idUtilisateur, description) " +
-            "Values (@nomChien, @idType, @idUtilisateur, @description)";
+        private const string InsertQuery = "INSERT INTO chien(nomChien, idType, idUtilisateur, description, lundi, mardi, mercredi, jeudi, vendredi, samedi, dimanche) " +
+            "Values (@nomChien, @idType, @idUtilisateur, @description, @lundi, @mardi, @mercredi, @jeudi, @vendredi, @samedi, @dimanche)";
 
         int userId;
+
+
         public UserActionDogAdd(int userId)
         {
             InitializeComponent();
@@ -33,6 +36,13 @@ namespace PromeneMonChien
                     com.Parameters.AddWithValue("@idType", comboBoxDogType.SelectedValue);
                     com.Parameters.AddWithValue("@idUtilisateur", this.userId);
                     com.Parameters.AddWithValue("@description", descriptionBox.Text);
+                    com.Parameters.AddWithValue("@lundi", checkBoxLundi.Checked);
+                    com.Parameters.AddWithValue("@mardi", checkBoxMardi.Checked);
+                    com.Parameters.AddWithValue("@mercredi", checkBoxMercredi.Checked);
+                    com.Parameters.AddWithValue("@jeudi", checkBoxJeudi.Checked);
+                    com.Parameters.AddWithValue("@vendredi", checkBoxVendredi.Checked);
+                    com.Parameters.AddWithValue("@samedi", checkBoxSamedi.Checked);
+                    com.Parameters.AddWithValue("@dimanche", checkBoxDimanche.Checked);
                     com.ExecuteNonQuery();
                 }
             }

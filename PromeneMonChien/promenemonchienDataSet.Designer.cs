@@ -464,6 +464,20 @@ namespace PromeneMonChien {
             
             private global::System.Data.DataColumn columndescription;
             
+            private global::System.Data.DataColumn columnlundi;
+            
+            private global::System.Data.DataColumn columnmardi;
+            
+            private global::System.Data.DataColumn columnmercredi;
+            
+            private global::System.Data.DataColumn columnjeudi;
+            
+            private global::System.Data.DataColumn columnvendredi;
+            
+            private global::System.Data.DataColumn columnsamedi;
+            
+            private global::System.Data.DataColumn columndimanche;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public chienDataTable() {
@@ -539,6 +553,62 @@ namespace PromeneMonChien {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn lundiColumn {
+                get {
+                    return this.columnlundi;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn mardiColumn {
+                get {
+                    return this.columnmardi;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn mercrediColumn {
+                get {
+                    return this.columnmercredi;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn jeudiColumn {
+                get {
+                    return this.columnjeudi;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn vendrediColumn {
+                get {
+                    return this.columnvendredi;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn samediColumn {
+                get {
+                    return this.columnsamedi;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn dimancheColumn {
+                get {
+                    return this.columndimanche;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -574,14 +644,21 @@ namespace PromeneMonChien {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public chienRow AddchienRow(string nomChien, typeRow parenttypeRowBychien_type_FK, utilisateurRow parentutilisateurRowBychien_utilisateur0_FK, string description) {
+            public chienRow AddchienRow(string nomChien, typeRow parenttypeRowBychien_type_FK, utilisateurRow parentutilisateurRowBychien_utilisateur0_FK, string description, string lundi, string mardi, string mercredi, string jeudi, string vendredi, string samedi, string dimanche) {
                 chienRow rowchienRow = ((chienRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         nomChien,
                         null,
                         null,
-                        description};
+                        description,
+                        lundi,
+                        mardi,
+                        mercredi,
+                        jeudi,
+                        vendredi,
+                        samedi,
+                        dimanche};
                 if ((parenttypeRowBychien_type_FK != null)) {
                     columnValuesArray[2] = parenttypeRowBychien_type_FK[0];
                 }
@@ -622,6 +699,13 @@ namespace PromeneMonChien {
                 this.columnidType = base.Columns["idType"];
                 this.columnidUtilisateur = base.Columns["idUtilisateur"];
                 this.columndescription = base.Columns["description"];
+                this.columnlundi = base.Columns["lundi"];
+                this.columnmardi = base.Columns["mardi"];
+                this.columnmercredi = base.Columns["mercredi"];
+                this.columnjeudi = base.Columns["jeudi"];
+                this.columnvendredi = base.Columns["vendredi"];
+                this.columnsamedi = base.Columns["samedi"];
+                this.columndimanche = base.Columns["dimanche"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -637,6 +721,20 @@ namespace PromeneMonChien {
                 base.Columns.Add(this.columnidUtilisateur);
                 this.columndescription = new global::System.Data.DataColumn("description", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndescription);
+                this.columnlundi = new global::System.Data.DataColumn("lundi", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnlundi);
+                this.columnmardi = new global::System.Data.DataColumn("mardi", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnmardi);
+                this.columnmercredi = new global::System.Data.DataColumn("mercredi", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnmercredi);
+                this.columnjeudi = new global::System.Data.DataColumn("jeudi", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnjeudi);
+                this.columnvendredi = new global::System.Data.DataColumn("vendredi", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnvendredi);
+                this.columnsamedi = new global::System.Data.DataColumn("samedi", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnsamedi);
+                this.columndimanche = new global::System.Data.DataColumn("dimanche", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndimanche);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnidChien}, true));
                 this.columnidChien.AutoIncrement = true;
@@ -2101,6 +2199,118 @@ namespace PromeneMonChien {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string lundi {
+                get {
+                    try {
+                        return ((string)(this[this.tablechien.lundiColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'lundi\' dans la table \'chien\' est DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablechien.lundiColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string mardi {
+                get {
+                    try {
+                        return ((string)(this[this.tablechien.mardiColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'mardi\' dans la table \'chien\' est DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablechien.mardiColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string mercredi {
+                get {
+                    try {
+                        return ((string)(this[this.tablechien.mercrediColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'mercredi\' dans la table \'chien\' est DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablechien.mercrediColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string jeudi {
+                get {
+                    try {
+                        return ((string)(this[this.tablechien.jeudiColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'jeudi\' dans la table \'chien\' est DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablechien.jeudiColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string vendredi {
+                get {
+                    try {
+                        return ((string)(this[this.tablechien.vendrediColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'vendredi\' dans la table \'chien\' est DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablechien.vendrediColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string samedi {
+                get {
+                    try {
+                        return ((string)(this[this.tablechien.samediColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'samedi\' dans la table \'chien\' est DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablechien.samediColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string dimanche {
+                get {
+                    try {
+                        return ((string)(this[this.tablechien.dimancheColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'dimanche\' dans la table \'chien\' est DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablechien.dimancheColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public typeRow typeRow {
                 get {
                     return ((typeRow)(this.GetParentRow(this.Table.ParentRelations["chien_type_FK"])));
@@ -2131,6 +2341,90 @@ namespace PromeneMonChien {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetdescriptionNull() {
                 this[this.tablechien.descriptionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IslundiNull() {
+                return this.IsNull(this.tablechien.lundiColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetlundiNull() {
+                this[this.tablechien.lundiColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsmardiNull() {
+                return this.IsNull(this.tablechien.mardiColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetmardiNull() {
+                this[this.tablechien.mardiColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsmercrediNull() {
+                return this.IsNull(this.tablechien.mercrediColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetmercrediNull() {
+                this[this.tablechien.mercrediColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsjeudiNull() {
+                return this.IsNull(this.tablechien.jeudiColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetjeudiNull() {
+                this[this.tablechien.jeudiColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsvendrediNull() {
+                return this.IsNull(this.tablechien.vendrediColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetvendrediNull() {
+                this[this.tablechien.vendrediColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IssamediNull() {
+                return this.IsNull(this.tablechien.samediColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetsamediNull() {
+                this[this.tablechien.samediColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsdimancheNull() {
+                return this.IsNull(this.tablechien.dimancheColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetdimancheNull() {
+                this[this.tablechien.dimancheColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

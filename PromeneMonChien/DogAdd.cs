@@ -9,8 +9,8 @@ namespace PromeneMonChien
     {
         private static string myConn = ConfigurationManager.ConnectionStrings["PromeneMonChien.Properties.Settings.promenemonchienConnectionString"].ConnectionString;
         // on ne spécifie pas l'id car il s'auto incrémentera tout seul à partir du dernier id de la bdd
-        private const string InsertQuery = "INSERT INTO chien(nomChien, idType, idUtilisateur, description)" +
-            " Values (@nomChien, @idType, @idUtilisateur, @description)";
+        private const string InsertQuery = "INSERT INTO chien(nomChien, idType, idUtilisateur, description, lundi, mardi, mercredi, jeudi, vendredi, samedi, dimanche) " +
+            "Values (@nomChien, @idType, @idUtilisateur, @description, @lundi, @mardi, @mercredi, @jeudi, @vendredi, @samedi, @dimanche)";
 
         public DogAdd()
         {
@@ -41,6 +41,13 @@ namespace PromeneMonChien
                     com.Parameters.AddWithValue("@idType", comboBoxDogType.SelectedValue);
                     com.Parameters.AddWithValue("@idUtilisateur", comboBoxUser.SelectedValue);
                     com.Parameters.AddWithValue("@description", descriptionBox.Text);
+                    com.Parameters.AddWithValue("@lundi", checkBoxLundi.Checked);
+                    com.Parameters.AddWithValue("@mardi", checkBoxMardi.Checked);
+                    com.Parameters.AddWithValue("@mercredi", checkBoxMercredi.Checked);
+                    com.Parameters.AddWithValue("@jeudi", checkBoxJeudi.Checked);
+                    com.Parameters.AddWithValue("@vendredi", checkBoxVendredi.Checked);
+                    com.Parameters.AddWithValue("@samedi", checkBoxSamedi.Checked);
+                    com.Parameters.AddWithValue("@dimanche", checkBoxDimanche.Checked);
                     com.ExecuteNonQuery();
                 }
             }

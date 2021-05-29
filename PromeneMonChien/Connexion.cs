@@ -36,7 +36,7 @@ namespace PromeneMonChien
                     user = com.ExecuteReader();
                     result = user.HasRows;
                     user.Read();
-                    if ((emailBox.Text == "g@d") && (passwordBox.Text == "123") && (result == true))
+                    if ((emailBox.Text == "g@d") && (passwordBox.Text == "aaa") && (result == true))
                     {
                         FormMainAdmin f = new FormMainAdmin(user.GetInt32("idUtilisateur"));
                         this.Hide();
