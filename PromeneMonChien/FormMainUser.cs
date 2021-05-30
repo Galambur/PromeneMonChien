@@ -32,15 +32,16 @@ namespace PromeneMonChien
                 "FROM chien, type " +
                 "WHERE chien.idType = type.idType " +
                 "AND chien.idUtilisateur=" + this.userId.ToString();
-            // les promenades où je suis inscrit de la plus récente à la plus ancienne
-            string SelectPromenadesQuery = "SELECT datePromenade as Date, nomChien as Chien " +
-                "FROM promenade, chien " +
+            // les promenades où je suis inscrit de la plus recente à la plus ancienne
+            string SelectPromenadesQuery = "SELECT datePromenade as Date, nomChien as Chien, CONCAT(u.nomUtilisateur, \" \", u.prenomUtilisateur) as Proprietaire, telephone as Numero, email as Email  " +
+                "FROM promenade, chien, utilisateur u " +
                 "WHERE promenade.idChien = chien.idChien " +
+                "AND u.idUtilisateur = chien.idUtilisateur " +
                 "AND promenade.idUtilisateur=" + this.userId.ToString() +
                 " ORDER BY Date DESC";
-            // les promenades où mes chiens sont inscrit, de la plus récente à la plus ancienne
+            // les promenades où mes chiens sont inscrit, de la plus recente à la plus ancienne
             string SelectDogPromenadesQuery = "SELECT c.nomChien as Chien, CONCAT(promeneur.nomUtilisateur, \" \", promeneur.prenomUtilisateur) as Promeneur, " +
-                "p.datePromenade as Date " +
+                "p.datePromenade as Date, promeneur.telephone as Numero, promeneur.email as Email " +
                 "FROM promenade p, chien c, utilisateur as promeneur " +
                 "WHERE p.idChien = c.idChien " +
                 "AND p.idUtilisateur = promeneur.idUtilisateur " +
@@ -48,7 +49,7 @@ namespace PromeneMonChien
                 " ORDER BY Date DESC";
 
 
-            // jointure des tables cherchées
+            // jointure des tables cherchees
             // ouverture de la connexion
             var con = new MySqlConnection(myConn);
             con.Open();

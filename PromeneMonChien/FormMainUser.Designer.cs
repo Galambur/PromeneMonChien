@@ -65,16 +65,16 @@
             this.mainTitle.Font = new System.Drawing.Font("Calibri", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mainTitle.Location = new System.Drawing.Point(0, 0);
             this.mainTitle.Name = "mainTitle";
-            this.mainTitle.Size = new System.Drawing.Size(1268, 100);
+            this.mainTitle.Size = new System.Drawing.Size(1630, 100);
             this.mainTitle.TabIndex = 0;
             this.mainTitle.Text = "Bienvenue sur Promène mon chien !";
             this.mainTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // buttonAddDog
             // 
-            this.buttonAddDog.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.buttonAddDog.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonAddDog.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAddDog.Location = new System.Drawing.Point(39, 541);
+            this.buttonAddDog.Location = new System.Drawing.Point(193, 239);
             this.buttonAddDog.Name = "buttonAddDog";
             this.buttonAddDog.Size = new System.Drawing.Size(314, 46);
             this.buttonAddDog.TabIndex = 1;
@@ -86,11 +86,11 @@
             // 
             this.dataGridViewDogs.AllowUserToAddRows = false;
             this.dataGridViewDogs.AllowUserToDeleteRows = false;
-            this.dataGridViewDogs.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.dataGridViewDogs.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataGridViewDogs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewDogs.Location = new System.Drawing.Point(23, 119);
+            this.dataGridViewDogs.Location = new System.Drawing.Point(623, 180);
             this.dataGridViewDogs.Name = "dataGridViewDogs";
-            this.dataGridViewDogs.Size = new System.Drawing.Size(344, 393);
+            this.dataGridViewDogs.Size = new System.Drawing.Size(395, 167);
             this.dataGridViewDogs.TabIndex = 2;
             // 
             // bindingSourceDog
@@ -120,9 +120,9 @@
             // 
             // buttonAddPromenade
             // 
-            this.buttonAddPromenade.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.buttonAddPromenade.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonAddPromenade.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAddPromenade.Location = new System.Drawing.Point(465, 541);
+            this.buttonAddPromenade.Location = new System.Drawing.Point(193, 590);
             this.buttonAddPromenade.Name = "buttonAddPromenade";
             this.buttonAddPromenade.Size = new System.Drawing.Size(372, 46);
             this.buttonAddPromenade.TabIndex = 3;
@@ -134,12 +134,12 @@
             // 
             this.dataGridViewPromenades.AllowUserToAddRows = false;
             this.dataGridViewPromenades.AllowUserToDeleteRows = false;
-            this.dataGridViewPromenades.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.dataGridViewPromenades.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataGridViewPromenades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewPromenades.Location = new System.Drawing.Point(530, 119);
+            this.dataGridViewPromenades.Location = new System.Drawing.Point(623, 503);
             this.dataGridViewPromenades.Name = "dataGridViewPromenades";
             this.dataGridViewPromenades.ReadOnly = true;
-            this.dataGridViewPromenades.Size = new System.Drawing.Size(243, 393);
+            this.dataGridViewPromenades.Size = new System.Drawing.Size(550, 167);
             this.dataGridViewPromenades.TabIndex = 4;
             // 
             // bindingSourcePromenades
@@ -172,11 +172,11 @@
             // 
             // clientLabel
             // 
-            this.clientLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.clientLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.clientLabel.AutoSize = true;
             this.clientLabel.Font = new System.Drawing.Font("Calibri", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clientLabel.ForeColor = System.Drawing.Color.DarkGreen;
-            this.clientLabel.Location = new System.Drawing.Point(101, 74);
+            this.clientLabel.Location = new System.Drawing.Point(193, 173);
             this.clientLabel.Name = "clientLabel";
             this.clientLabel.Size = new System.Drawing.Size(178, 42);
             this.clientLabel.TabIndex = 5;
@@ -184,11 +184,11 @@
             // 
             // label1
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label1.Location = new System.Drawing.Point(523, 74);
+            this.label1.Location = new System.Drawing.Point(193, 531);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(266, 42);
             this.label1.TabIndex = 6;
@@ -196,11 +196,11 @@
             // 
             // label2
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label2.Location = new System.Drawing.Point(863, 74);
+            this.label2.Location = new System.Drawing.Point(193, 898);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(405, 42);
             this.label2.TabIndex = 9;
@@ -210,12 +210,12 @@
             // 
             this.dataGridViewDogPromenade.AllowUserToAddRows = false;
             this.dataGridViewDogPromenade.AllowUserToDeleteRows = false;
-            this.dataGridViewDogPromenade.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.dataGridViewDogPromenade.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataGridViewDogPromenade.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewDogPromenade.Location = new System.Drawing.Point(900, 119);
+            this.dataGridViewDogPromenade.Location = new System.Drawing.Point(623, 828);
             this.dataGridViewDogPromenade.Name = "dataGridViewDogPromenade";
             this.dataGridViewDogPromenade.ReadOnly = true;
-            this.dataGridViewDogPromenade.Size = new System.Drawing.Size(346, 393);
+            this.dataGridViewDogPromenade.Size = new System.Drawing.Size(550, 167);
             this.dataGridViewDogPromenade.TabIndex = 8;
             // 
             // FormMainUser
@@ -223,7 +223,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MintCream;
-            this.ClientSize = new System.Drawing.Size(1268, 635);
+            this.ClientSize = new System.Drawing.Size(1630, 1042);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridViewDogPromenade);
             this.Controls.Add(this.label1);
