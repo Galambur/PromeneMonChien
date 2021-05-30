@@ -1,7 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
+using System;
 using System.Configuration;
 using System.Windows.Forms;
-using System.Data;
 
 namespace PromeneMonChien
 {
@@ -12,6 +12,9 @@ namespace PromeneMonChien
         private const string InsertQuery = "INSERT INTO promenade(datePromenade, idUtilisateur, idChien) Values (@datePromenade, @idUtilisateur, @idChien)";
         private const string SelectQuery = "SELECT lundi, mardi, mercredi, jeudi, vendredi, samedi, dimanche " +
             "FROM chien " +
+            "WHERE idChien = @idChien";
+        private const string SelectPromenadesQuery = "SELECT datePromenade " +
+            "FROM promenade " +
             "WHERE idChien = @idChien";
 
         public PromenadeCreate()
@@ -29,9 +32,10 @@ namespace PromeneMonChien
         private void validateButton_Click(object sender, System.EventArgs e)
         {
             MySqlConnection con = new MySqlConnection(myConn);
-            // partie select
             MySqlCommand selectCom = new MySqlCommand(SelectQuery, con);
+            MySqlCommand comPromenade = new MySqlCommand(SelectPromenadesQuery, con);
             MySqlDataReader reader;
+            MySqlDataReader readerPromenade;
 
             using (con)
             {
@@ -54,16 +58,43 @@ namespace PromeneMonChien
                     {
                         MessageBox.Show("Chien indisponible ce jour là");
                         reader.Close();
-                    } else
+                    } else // le propriétaire du chien n'a pas précisé que le jour choisi le chien ne peut pas être promené
                     {
+                        // vérification que le chien ne fait pas déjà une promenade ce jour là
                         reader.Close();
-                        // requête insert
-                        using (MySqlCommand com = new MySqlCommand(InsertQuery, con))
+                        bool estDisponible = true;
+
+
+                        using (comPromenade)
                         {
-                            com.Parameters.AddWithValue("@datePromenade", dateTimePicker.Value);
-                            com.Parameters.AddWithValue("@idUtilisateur", comboBoxUser.SelectedValue);
-                            com.Parameters.AddWithValue("@idChien", comboBoxDog.SelectedValue);
-                            com.ExecuteNonQuery();
+                            comPromenade.Parameters.AddWithValue("@idChien", comboBoxDog.SelectedValue);
+                            readerPromenade = comPromenade.ExecuteReader();
+                            int count = readerPromenade.FieldCount;
+
+                            while (readerPromenade.Read())
+                            {
+                                for (int i = 0; i < count; i++)
+                                {
+                                    // on enlève l'heure choisie pour comparer les jours
+                                    if (readerPromenade.GetString(0).Remove(11) == dateTimePicker.Value.ToString().Remove(11))
+                                    {
+                                        estDisponible = false;
+                                        MessageBox.Show("Ce chien est déjà en promenade ce jour là");
+                                    }
+                                }
+                            }
+                            readerPromenade.Close();
+                        }
+                        if (estDisponible == true)
+                        {
+                            // requête insert
+                            using (MySqlCommand com = new MySqlCommand(InsertQuery, con))
+                            {
+                                com.Parameters.AddWithValue("@datePromenade", dateTimePicker.Value);
+                                com.Parameters.AddWithValue("@idUtilisateur", comboBoxUser.SelectedValue);
+                                com.Parameters.AddWithValue("@idChien", comboBoxDog.SelectedValue);
+                                com.ExecuteNonQuery();
+                            }
                         }
                         // fermeture de la fenêtre
                         this.Close();
