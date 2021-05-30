@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System.Configuration;
 using System.Windows.Forms;
+using System.Data;
 
 namespace PromeneMonChien
 {
@@ -9,6 +10,9 @@ namespace PromeneMonChien
         private static string myConn = ConfigurationManager.ConnectionStrings["PromeneMonChien.Properties.Settings.promenemonchienConnectionString"].ConnectionString;
         // on ne spécifie pas l'id car il s'auto incrémentera tout seul à partir du dernier id de la bdd
         private const string InsertQuery = "INSERT INTO promenade(datePromenade, idUtilisateur, idChien) Values (@datePromenade, @idUtilisateur, @idChien)";
+        private const string SelectQuery = "SELECT lundi, mardi, mercredi, jeudi, vendredi, samedi, dimanche " +
+            "FROM chien " +
+            "WHERE idChien = @idChien";
 
         public PromenadeCreate()
         {
@@ -17,32 +21,55 @@ namespace PromeneMonChien
 
         private void PromenadeCreate_Load(object sender, System.EventArgs e)
         {
-            // TODO: cette ligne de code charge les données dans la table 'promenemonchienDataSet.utilisateur'. Vous pouvez la déplacer ou la supprimer selon les besoins.
             this.utilisateurTableAdapter.Fill(this.promenemonchienDataSet.utilisateur);
-            // TODO: cette ligne de code charge les données dans la table 'promenemonchienDataSet.chien'. Vous pouvez la déplacer ou la supprimer selon les besoins.
             this.chienTableAdapter.Fill(this.promenemonchienDataSet.chien);
 
         }
 
         private void validateButton_Click(object sender, System.EventArgs e)
         {
-            using (MySqlConnection con = new MySqlConnection(myConn))
+            MySqlConnection con = new MySqlConnection(myConn);
+            // partie select
+            MySqlCommand selectCom = new MySqlCommand(SelectQuery, con);
+            MySqlDataReader reader;
+
+            using (con)
             {
-                // ouverture de la connexion à notre base de données
                 con.Open();
-                using (MySqlCommand com = new MySqlCommand(InsertQuery, con))
+
+                // requête select
+                using (selectCom)
                 {
-                    // on récupère les données du formulaire en les liant aux paramètre de notre 
-                    // requête
-                    com.Parameters.AddWithValue("@datePromenade", dateTimePicker.Value);
-                    com.Parameters.AddWithValue("@idUtilisateur", comboBoxUser.SelectedValue);
-                    com.Parameters.AddWithValue("@idChien", comboBoxDog.SelectedValue);
-                    // on exécute la requête
-                    com.ExecuteNonQuery();
+                    selectCom.Parameters.AddWithValue("@idChien", comboBoxDog.SelectedValue);
+                    reader = selectCom.ExecuteReader();
+                    reader.Read();
+
+                    if (((int)dateTimePicker.Value.DayOfWeek == 1 && reader.GetString(0) == "True") ||
+                    ((int)dateTimePicker.Value.DayOfWeek == 2 && reader.GetString(1) == "True") ||
+                    ((int)dateTimePicker.Value.DayOfWeek == 3 && reader.GetString(2) == "True") ||
+                    ((int)dateTimePicker.Value.DayOfWeek == 4 && reader.GetString(3) == "True") ||
+                    ((int)dateTimePicker.Value.DayOfWeek == 5 && reader.GetString(4) == "True") ||
+                    ((int)dateTimePicker.Value.DayOfWeek == 6 && reader.GetString(5) == "True") ||
+                    ((int)dateTimePicker.Value.DayOfWeek == 7 && reader.GetString(6) == "True"))
+                    {
+                        MessageBox.Show("Chien indisponible ce jour là");
+                        reader.Close();
+                    } else
+                    {
+                        reader.Close();
+                        // requête insert
+                        using (MySqlCommand com = new MySqlCommand(InsertQuery, con))
+                        {
+                            com.Parameters.AddWithValue("@datePromenade", dateTimePicker.Value);
+                            com.Parameters.AddWithValue("@idUtilisateur", comboBoxUser.SelectedValue);
+                            com.Parameters.AddWithValue("@idChien", comboBoxDog.SelectedValue);
+                            com.ExecuteNonQuery();
+                        }
+                        // fermeture de la fenêtre
+                        this.Close();
+                    }
                 }
             }
-            // fermeture de la fenêtre
-            this.Close();
 
         }
     }

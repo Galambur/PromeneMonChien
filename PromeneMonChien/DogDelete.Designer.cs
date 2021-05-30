@@ -187,6 +187,7 @@
             // 
             this.checkBoxVendredi.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBoxVendredi.AutoSize = true;
+            this.checkBoxVendredi.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.bindingSourceDog, "vendredi", true));
             this.checkBoxVendredi.Enabled = false;
             this.checkBoxVendredi.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxVendredi.Location = new System.Drawing.Point(479, 543);
@@ -200,6 +201,7 @@
             // 
             this.checkBoxSamedi.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBoxSamedi.AutoSize = true;
+            this.checkBoxSamedi.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.bindingSourceDog, "samedi", true));
             this.checkBoxSamedi.Enabled = false;
             this.checkBoxSamedi.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxSamedi.Location = new System.Drawing.Point(626, 543);
@@ -213,6 +215,7 @@
             // 
             this.checkBoxDimanche.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBoxDimanche.AutoSize = true;
+            this.checkBoxDimanche.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.bindingSourceDog, "dimanche", true));
             this.checkBoxDimanche.Enabled = false;
             this.checkBoxDimanche.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxDimanche.Location = new System.Drawing.Point(756, 543);
@@ -226,6 +229,7 @@
             // 
             this.checkBoxMardi.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBoxMardi.AutoSize = true;
+            this.checkBoxMardi.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.bindingSourceDog, "mardi", true));
             this.checkBoxMardi.Enabled = false;
             this.checkBoxMardi.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxMardi.Location = new System.Drawing.Point(626, 502);
@@ -239,6 +243,7 @@
             // 
             this.checkBoxMercredi.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBoxMercredi.AutoSize = true;
+            this.checkBoxMercredi.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.bindingSourceDog, "mercredi", true));
             this.checkBoxMercredi.Enabled = false;
             this.checkBoxMercredi.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxMercredi.Location = new System.Drawing.Point(756, 502);
@@ -252,6 +257,7 @@
             // 
             this.checkBoxJeudi.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBoxJeudi.AutoSize = true;
+            this.checkBoxJeudi.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.bindingSourceDog, "jeudi", true));
             this.checkBoxJeudi.Enabled = false;
             this.checkBoxJeudi.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxJeudi.Location = new System.Drawing.Point(917, 502);
@@ -265,6 +271,7 @@
             // 
             this.checkBoxLundi.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBoxLundi.AutoSize = true;
+            this.checkBoxLundi.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.bindingSourceDog, "lundi", true));
             this.checkBoxLundi.Enabled = false;
             this.checkBoxLundi.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxLundi.Location = new System.Drawing.Point(479, 502);
