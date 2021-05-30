@@ -43,9 +43,12 @@
             this.utilisateurTableAdapter = new PromeneMonChien.promenemonchienDataSetTableAdapters.utilisateurTableAdapter();
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.labelDate = new System.Windows.Forms.Label();
+            this.dataGridViewDays = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDog)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.promenemonchienDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDays)).BeginInit();
             this.SuspendLayout();
             // 
             // createPromenadeTitle
@@ -54,7 +57,7 @@
             this.createPromenadeTitle.Font = new System.Drawing.Font("Calibri", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.createPromenadeTitle.Location = new System.Drawing.Point(0, 0);
             this.createPromenadeTitle.Name = "createPromenadeTitle";
-            this.createPromenadeTitle.Size = new System.Drawing.Size(800, 100);
+            this.createPromenadeTitle.Size = new System.Drawing.Size(1090, 100);
             this.createPromenadeTitle.TabIndex = 43;
             this.createPromenadeTitle.Text = "Prévoir une promenade";
             this.createPromenadeTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -63,7 +66,7 @@
             // 
             this.validateButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.validateButton.Font = new System.Drawing.Font("Arial Narrow", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.validateButton.Location = new System.Drawing.Point(682, 395);
+            this.validateButton.Location = new System.Drawing.Point(972, 518);
             this.validateButton.Name = "validateButton";
             this.validateButton.Size = new System.Drawing.Size(106, 43);
             this.validateButton.TabIndex = 44;
@@ -78,11 +81,12 @@
             this.comboBoxDog.DisplayMember = "nomChien";
             this.comboBoxDog.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxDog.FormattingEnabled = true;
-            this.comboBoxDog.Location = new System.Drawing.Point(353, 207);
+            this.comboBoxDog.Location = new System.Drawing.Point(498, 268);
             this.comboBoxDog.Name = "comboBoxDog";
             this.comboBoxDog.Size = new System.Drawing.Size(249, 47);
             this.comboBoxDog.TabIndex = 45;
             this.comboBoxDog.ValueMember = "idChien";
+            this.comboBoxDog.SelectedIndexChanged += new System.EventHandler(this.comboBoxDog_SelectedIndexChanged);
             // 
             // bindingSourceDog
             // 
@@ -99,7 +103,7 @@
             this.labelDog.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelDog.AutoSize = true;
             this.labelDog.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDog.Location = new System.Drawing.Point(232, 210);
+            this.labelDog.Location = new System.Drawing.Point(377, 271);
             this.labelDog.Name = "labelDog";
             this.labelDog.Size = new System.Drawing.Size(91, 39);
             this.labelDog.TabIndex = 46;
@@ -112,7 +116,7 @@
             this.comboBoxUser.DisplayMember = "nomUtilisateur";
             this.comboBoxUser.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxUser.FormattingEnabled = true;
-            this.comboBoxUser.Location = new System.Drawing.Point(353, 277);
+            this.comboBoxUser.Location = new System.Drawing.Point(498, 338);
             this.comboBoxUser.Name = "comboBoxUser";
             this.comboBoxUser.Size = new System.Drawing.Size(249, 47);
             this.comboBoxUser.TabIndex = 47;
@@ -128,7 +132,7 @@
             this.labelUser.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelUser.AutoSize = true;
             this.labelUser.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelUser.Location = new System.Drawing.Point(159, 280);
+            this.labelUser.Location = new System.Drawing.Point(304, 341);
             this.labelUser.Name = "labelUser";
             this.labelUser.Size = new System.Drawing.Size(164, 39);
             this.labelUser.TabIndex = 48;
@@ -148,7 +152,7 @@
             this.dateTimePicker.CustomFormat = "yyyy-MM-dd hh:mm";
             this.dateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker.Location = new System.Drawing.Point(353, 152);
+            this.dateTimePicker.Location = new System.Drawing.Point(498, 213);
             this.dateTimePicker.Name = "dateTimePicker";
             this.dateTimePicker.Size = new System.Drawing.Size(249, 31);
             this.dateTimePicker.TabIndex = 50;
@@ -158,18 +162,44 @@
             this.labelDate.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelDate.AutoSize = true;
             this.labelDate.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDate.Location = new System.Drawing.Point(244, 147);
+            this.labelDate.Location = new System.Drawing.Point(389, 208);
             this.labelDate.Name = "labelDate";
             this.labelDate.Size = new System.Drawing.Size(79, 39);
             this.labelDate.TabIndex = 51;
             this.labelDate.Text = "Date";
+            // 
+            // dataGridViewDays
+            // 
+            this.dataGridViewDays.AllowUserToAddRows = false;
+            this.dataGridViewDays.AllowUserToDeleteRows = false;
+            this.dataGridViewDays.AllowUserToOrderColumns = true;
+            this.dataGridViewDays.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dataGridViewDays.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewDays.Location = new System.Drawing.Point(196, 441);
+            this.dataGridViewDays.Name = "dataGridViewDays";
+            this.dataGridViewDays.ReadOnly = true;
+            this.dataGridViewDays.Size = new System.Drawing.Size(744, 52);
+            this.dataGridViewDays.TabIndex = 59;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(200, 399);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(315, 39);
+            this.label1.TabIndex = 60;
+            this.label1.Text = "Jours d\'indisponibilité :";
             // 
             // PromenadeCreate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MintCream;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1090, 573);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.dataGridViewDays);
             this.Controls.Add(this.labelDate);
             this.Controls.Add(this.dateTimePicker);
             this.Controls.Add(this.labelUser);
@@ -186,6 +216,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDog)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.promenemonchienDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDays)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -205,5 +236,7 @@
         private promenemonchienDataSetTableAdapters.utilisateurTableAdapter utilisateurTableAdapter;
         private System.Windows.Forms.DateTimePicker dateTimePicker;
         private System.Windows.Forms.Label labelDate;
+        private System.Windows.Forms.DataGridView dataGridViewDays;
+        private System.Windows.Forms.Label label1;
     }
 }

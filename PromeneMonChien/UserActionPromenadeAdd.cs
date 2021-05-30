@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Configuration;
+using System.Data;
 using System.Windows.Forms;
 
 namespace PromeneMonChien
@@ -27,7 +28,7 @@ namespace PromeneMonChien
         private void UserActionPromenadeAdd_Load(object sender, EventArgs e)
         {
             this.chienTableAdapter.Fill(this.promenemonchienDataSet.chien);
-
+            comboBoxDog_SelectedIndexChanged(sender, e);
         }
 
         private void validateButton_Click(object sender, System.EventArgs e)
@@ -107,6 +108,24 @@ namespace PromeneMonChien
                 }
             }
 
+        }
+
+        private void comboBoxDog_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            MySqlCommand com;
+            MySqlConnection con = new MySqlConnection(myConn);
+            con.Open();
+
+            using (com = new MySqlCommand(SelectQuery, con))
+            {
+                com.Parameters.AddWithValue("@idChien", comboBoxDog.SelectedValue);
+                com.ExecuteNonQuery();
+                var sdr = new MySqlDataAdapter(com);
+                var dt = new DataTable();
+                sdr.Fill(dt);
+                dataGridViewDays.DataSource = dt;
+            }
+            con.Close();
         }
     }
 }
