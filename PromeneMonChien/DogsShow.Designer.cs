@@ -31,18 +31,19 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DogsShow));
             this.showDogsTitle = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.bindingSourceDogs = new System.Windows.Forms.BindingSource(this.components);
             this.promenemonchienDataSet = new PromeneMonChien.promenemonchienDataSet();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.chienTableAdapter = new PromeneMonChien.promenemonchienDataSetTableAdapters.chienTableAdapter();
             this.idChienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomChienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idUtilisateurDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.chienTableAdapter = new PromeneMonChien.promenemonchienDataSetTableAdapters.chienTableAdapter();
+            this.nbPromenades = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDogs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.promenemonchienDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // showDogsTitle
@@ -57,16 +58,6 @@
             this.showDogsTitle.Text = "Liste des chiens";
             this.showDogsTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // bindingSourceDogs
-            // 
-            this.bindingSourceDogs.DataMember = "chien";
-            this.bindingSourceDogs.DataSource = this.promenemonchienDataSet;
-            // 
-            // promenemonchienDataSet
-            // 
-            this.promenemonchienDataSet.DataSetName = "promenemonchienDataSet";
-            this.promenemonchienDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
@@ -79,13 +70,28 @@
             this.nomChienDataGridViewTextBoxColumn,
             this.idTypeDataGridViewTextBoxColumn,
             this.idUtilisateurDataGridViewTextBoxColumn,
-            this.descriptionDataGridViewTextBoxColumn});
+            this.descriptionDataGridViewTextBoxColumn,
+            this.nbPromenades});
             this.dataGridView1.DataSource = this.bindingSourceDogs;
             this.dataGridView1.Location = new System.Drawing.Point(120, 122);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(538, 268);
+            this.dataGridView1.Size = new System.Drawing.Size(645, 268);
             this.dataGridView1.TabIndex = 3;
+            // 
+            // bindingSourceDogs
+            // 
+            this.bindingSourceDogs.DataMember = "chien";
+            this.bindingSourceDogs.DataSource = this.promenemonchienDataSet;
+            // 
+            // promenemonchienDataSet
+            // 
+            this.promenemonchienDataSet.DataSetName = "promenemonchienDataSet";
+            this.promenemonchienDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // chienTableAdapter
+            // 
+            this.chienTableAdapter.ClearBeforeFill = true;
             // 
             // idChienDataGridViewTextBoxColumn
             // 
@@ -122,9 +128,12 @@
             this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
             this.descriptionDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // chienTableAdapter
+            // nbPromenades
             // 
-            this.chienTableAdapter.ClearBeforeFill = true;
+            this.nbPromenades.DataPropertyName = "nbPromenades";
+            this.nbPromenades.HeaderText = "Nombre de promenades";
+            this.nbPromenades.Name = "nbPromenades";
+            this.nbPromenades.ReadOnly = true;
             // 
             // DogsShow
             // 
@@ -139,9 +148,9 @@
             this.Text = "Promène mon chien";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.ShowDogs_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDogs)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.promenemonchienDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -158,5 +167,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn idTypeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idUtilisateurDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nbPromenades;
     }
 }

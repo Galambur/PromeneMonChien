@@ -478,6 +478,8 @@ namespace PromeneMonChien {
             
             private global::System.Data.DataColumn columndimanche;
             
+            private global::System.Data.DataColumn columnnbPromenades;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public chienDataTable() {
@@ -609,6 +611,14 @@ namespace PromeneMonChien {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn nbPromenadesColumn {
+                get {
+                    return this.columnnbPromenades;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -644,7 +654,7 @@ namespace PromeneMonChien {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public chienRow AddchienRow(string nomChien, typeRow parenttypeRowBychien_type_FK, utilisateurRow parentutilisateurRowBychien_utilisateur0_FK, string description, string lundi, string mardi, string mercredi, string jeudi, string vendredi, string samedi, string dimanche) {
+            public chienRow AddchienRow(string nomChien, typeRow parenttypeRowBychien_type_FK, utilisateurRow parentutilisateurRowBychien_utilisateur0_FK, string description, string lundi, string mardi, string mercredi, string jeudi, string vendredi, string samedi, string dimanche, string nbPromenades) {
                 chienRow rowchienRow = ((chienRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -658,7 +668,8 @@ namespace PromeneMonChien {
                         jeudi,
                         vendredi,
                         samedi,
-                        dimanche};
+                        dimanche,
+                        nbPromenades};
                 if ((parenttypeRowBychien_type_FK != null)) {
                     columnValuesArray[2] = parenttypeRowBychien_type_FK[0];
                 }
@@ -706,6 +717,7 @@ namespace PromeneMonChien {
                 this.columnvendredi = base.Columns["vendredi"];
                 this.columnsamedi = base.Columns["samedi"];
                 this.columndimanche = base.Columns["dimanche"];
+                this.columnnbPromenades = base.Columns["nbPromenades"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -735,6 +747,8 @@ namespace PromeneMonChien {
                 base.Columns.Add(this.columnsamedi);
                 this.columndimanche = new global::System.Data.DataColumn("dimanche", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndimanche);
+                this.columnnbPromenades = new global::System.Data.DataColumn("nbPromenades", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnbPromenades);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnidChien}, true));
                 this.columnidChien.AutoIncrement = true;
@@ -2311,6 +2325,22 @@ namespace PromeneMonChien {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string nbPromenades {
+                get {
+                    try {
+                        return ((string)(this[this.tablechien.nbPromenadesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'nbPromenades\' dans la table \'chien\' est DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablechien.nbPromenadesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public typeRow typeRow {
                 get {
                     return ((typeRow)(this.GetParentRow(this.Table.ParentRelations["chien_type_FK"])));
@@ -2425,6 +2455,18 @@ namespace PromeneMonChien {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetdimancheNull() {
                 this[this.tablechien.dimancheColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsnbPromenadesNull() {
+                return this.IsNull(this.tablechien.nbPromenadesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetnbPromenadesNull() {
+                this[this.tablechien.nbPromenadesColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

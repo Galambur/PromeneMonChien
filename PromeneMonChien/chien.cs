@@ -40,6 +40,7 @@ namespace PromeneMonChien
         public bool venderdi { get; set; }
         public bool samedi { get; set; }
         public bool dimanche { get; set; }
+        public int nbPromenades { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<promenade> promenades { get; set; }
