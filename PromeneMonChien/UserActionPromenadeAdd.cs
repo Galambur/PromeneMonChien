@@ -111,7 +111,6 @@ namespace PromeneMonChien
                     }
                 }
             }
-
         }
 
         private void comboBoxDog_SelectedIndexChanged(object sender, EventArgs e)
