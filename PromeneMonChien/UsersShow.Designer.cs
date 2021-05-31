@@ -32,6 +32,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UsersShow));
             this.showUsersTitle = new System.Windows.Forms.Label();
             this.dataGridViewUsers = new System.Windows.Forms.DataGridView();
+            this.utilisateurBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSourceUsers = new System.Windows.Forms.BindingSource(this.components);
+            this.promenemonchienDataSet = new PromeneMonChien.promenemonchienDataSet();
+            this.utilisateurTableAdapter = new PromeneMonChien.promenemonchienDataSetTableAdapters.utilisateurTableAdapter();
             this.idUtilisateurDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomUtilisateurDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prenomUtilisateurDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,10 +44,6 @@
             this.telephoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mdpDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.utilisateurBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bindingSourceUsers = new System.Windows.Forms.BindingSource(this.components);
-            this.promenemonchienDataSet = new PromeneMonChien.promenemonchienDataSet();
-            this.utilisateurTableAdapter = new PromeneMonChien.promenemonchienDataSetTableAdapters.utilisateurTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.utilisateurBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceUsers)).BeginInit();
@@ -84,6 +84,25 @@
             this.dataGridViewUsers.ReadOnly = true;
             this.dataGridViewUsers.Size = new System.Drawing.Size(739, 283);
             this.dataGridViewUsers.TabIndex = 3;
+            // 
+            // utilisateurBindingSource
+            // 
+            this.utilisateurBindingSource.DataMember = "utilisateur";
+            this.utilisateurBindingSource.DataSource = this.bindingSourceUsers;
+            // 
+            // bindingSourceUsers
+            // 
+            this.bindingSourceUsers.DataSource = this.promenemonchienDataSet;
+            this.bindingSourceUsers.Position = 0;
+            // 
+            // promenemonchienDataSet
+            // 
+            this.promenemonchienDataSet.DataSetName = "promenemonchienDataSet";
+            this.promenemonchienDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // utilisateurTableAdapter
+            // 
+            this.utilisateurTableAdapter.ClearBeforeFill = true;
             // 
             // idUtilisateurDataGridViewTextBoxColumn
             // 
@@ -140,25 +159,7 @@
             this.mdpDataGridViewTextBoxColumn.HeaderText = "Mot de passe";
             this.mdpDataGridViewTextBoxColumn.Name = "mdpDataGridViewTextBoxColumn";
             this.mdpDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // utilisateurBindingSource
-            // 
-            this.utilisateurBindingSource.DataMember = "utilisateur";
-            this.utilisateurBindingSource.DataSource = this.bindingSourceUsers;
-            // 
-            // bindingSourceUsers
-            // 
-            this.bindingSourceUsers.DataSource = this.promenemonchienDataSet;
-            this.bindingSourceUsers.Position = 0;
-            // 
-            // promenemonchienDataSet
-            // 
-            this.promenemonchienDataSet.DataSetName = "promenemonchienDataSet";
-            this.promenemonchienDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // utilisateurTableAdapter
-            // 
-            this.utilisateurTableAdapter.ClearBeforeFill = true;
+            this.mdpDataGridViewTextBoxColumn.Visible = false;
             // 
             // UsersShow
             // 
