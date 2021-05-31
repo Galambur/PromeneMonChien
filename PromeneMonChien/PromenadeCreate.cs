@@ -11,9 +11,6 @@ namespace PromeneMonChien
         private static string myConn = ConfigurationManager.ConnectionStrings["PromeneMonChien.Properties.Settings.promenemonchienConnectionString"].ConnectionString;
         // on ne spécifie pas l'id car il s'auto incrémentera tout seul à partir du dernier id de la bdd
         private const string InsertQuery = "INSERT INTO promenade(datePromenade, idUtilisateur, idChien) Values (@datePromenade, @idUtilisateur, @idChien)";
-        private const string SelectQuery = "SELECT lundi, mardi, mercredi, jeudi, vendredi, samedi, dimanche " +
-            "FROM chien " +
-            "WHERE idChien = @idChien";
         private const string SelectPromenadesQuery = "SELECT datePromenade " +
             "FROM promenade " +
             "WHERE idChien = @idChien";

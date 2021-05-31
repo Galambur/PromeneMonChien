@@ -121,6 +121,9 @@
     <Compile Include="PromenadeShow.Designer.cs">
       <DependentUpon>PromenadeShow.cs</DependentUpon>
     </Compile>
+    <Compile Include="promenemonchienDataSet.cs">
+      <DependentUpon>promenemonchienDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="UserActionDogAdd.cs">
       <SubType>Form</SubType>
     </Compile>
