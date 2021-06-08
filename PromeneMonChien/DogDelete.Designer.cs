@@ -78,6 +78,7 @@
             this.comboBoxDogName.Size = new System.Drawing.Size(249, 47);
             this.comboBoxDogName.TabIndex = 44;
             this.comboBoxDogName.ValueMember = "idChien";
+            this.comboBoxDogName.SelectedIndexChanged += new System.EventHandler(this.comboBoxDogName_SelectedIndexChanged);
             // 
             // bindingSourceDog
             // 

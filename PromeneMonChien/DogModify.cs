@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Configuration;
+using System.Data;
 using System.Windows.Forms;
 
 namespace PromeneMonChien
@@ -26,6 +27,7 @@ namespace PromeneMonChien
             this.utilisateurTableAdapter.Fill(this.promenemonchienDataSet.utilisateur);
             this.chienTableAdapter.Fill(this.promenemonchienDataSet.chien);
             this.typeTableAdapter.Fill(this.promenemonchienDataSet.type);
+            comboBoxDog_SelectedIndexChanged(sender, e);
         }
 
         private void validateButton_Click(object sender, EventArgs e)
@@ -56,6 +58,66 @@ namespace PromeneMonChien
             }
             //fermeture de la fenêtre de modification
             this.Close();
+        }
+
+        private void comboBoxDog_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            using (MySqlConnection con = new MySqlConnection(myConn))
+            {
+                con.Open();
+
+                // requête select : on récupère les valeurs de la semaine pour le chien
+                using (MySqlCommand selectCom = new MySqlCommand("getDays", con))
+                {
+                    selectCom.Parameters.AddWithValue("@uIdChien", comboBoxDog.SelectedValue);
+                    selectCom.CommandType = CommandType.StoredProcedure;
+
+                    var reader = selectCom.ExecuteReader();
+                    reader.Read();
+
+                    // lundi
+                    if (reader.GetString(0) == "True")
+                        checkBoxLundi.Checked = true;
+                    else
+                        checkBoxLundi.Checked = false;
+
+                    // mardi
+                    if (reader.GetString(1) == "True")
+                        checkBoxMardi.Checked = true;
+                    else
+                        checkBoxMardi.Checked = false;
+
+                    // mercredi
+                    if (reader.GetString(2) == "True")
+                        checkBoxMercredi.Checked = true;
+                    else
+                        checkBoxMercredi.Checked = false;
+
+                    // jeudi
+                    if (reader.GetString(3) == "True")
+                        checkBoxJeudi.Checked = true;
+                    else
+                        checkBoxJeudi.Checked = false;
+
+                    // vendredi
+                    if (reader.GetString(4) == "True")
+                        checkBoxVendredi.Checked = true;
+                    else
+                        checkBoxVendredi.Checked = false;
+
+                    // samedi
+                    if (reader.GetString(5) == "True")
+                        checkBoxSamedi.Checked = true;
+                    else
+                        checkBoxSamedi.Checked = false;
+
+                    // dimanche
+                    if (reader.GetString(6) == "True")
+                        checkBoxDimanche.Checked = true;
+                    else
+                        checkBoxDimanche.Checked = false;
+                }
+            }
         }
     }
 }
